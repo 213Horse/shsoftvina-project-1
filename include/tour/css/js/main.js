@@ -1,7 +1,14 @@
 document.addEventListener("DOMContentLoaded", function() {
+    const navbar = document.querySelector(".navbar");
     const imageItems = document.querySelectorAll(".image-item img");
     const header = document.querySelector(".header");
-
+    window.addEventListener("scroll", function() {
+        if (window.scrollY > 50) { // Kiểm tra nếu cuộn trang vượt quá 50px
+            navbar.classList.add("scrolled");
+        } else {
+            navbar.classList.remove("scrolled");
+        }
+    });
     // Đặt ảnh đầu tiên làm nền mặc định
     if (imageItems.length > 0) {
         const defaultImageUrl = imageItems[0].src;
