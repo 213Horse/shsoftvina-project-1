@@ -1,68 +1,84 @@
-/* Style cho header */
+/* Style for header */
 .header {
     position: relative;
-    background-image: url('./img/main/theme.png'); /* Thay thế bằng hình nền của bạn */
     background-size: cover;
     background-position: center;
     color: white;
     padding: 20px;
-    height: 700px;
+    height: 100vh; /* Full-screen height */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: background-image 0.3s ease-in-out; /* Smooth transition for background change */
 }
 
+
+/* Navigation bar */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 0;
+    border-bottom: 1px solid white;
+
 }
 
 .logo img {
-    height: 50px;
+    height: 60px; /* Increased logo size slightly */
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 25px; /* Increased gap for better spacing */
 }
 
 .nav-links li a {
     color: white;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.2rem; /* Larger font size for navigation links */
+    font-weight: bold; /* Make links bold */
 }
 
 .weather {
     text-align: right;
+    font-size: 1.2rem; /* Adjusted the font size for better readability */
 }
 
 .weather p {
-    margin: 0;
+    display: flex;
+    align-items: center;
 }
 
+.temp-icon {
+    width: 24px; /* Adjust the size of the icon */
+    height: 24px;
+    margin-right: 8px; /* Space between icon and temperature text */
+}
+
+
+/* Hero content */
 .hero-content {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 30px; /* Adjusted margin for better positioning */
 }
 
 .hero-content h1 {
-    font-size: 3rem;
+    font-size: 4rem; /* Larger title font */
     margin-bottom: 10px;
 }
 
 .hero-content h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+    font-size: 2.5rem; /* Slightly larger subtitle font */
+    margin-bottom: 20px;
 }
 
 .hero-content p {
-    font-size: 1.2rem;
+    font-size: 1.5rem; /* Increased font size */
     margin-bottom: 30px;
 }
 
+/* Menu links */
 .menu-links {
     display: flex;
     justify-content: center;
@@ -73,16 +89,17 @@
 .menu-links a {
     color: white;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.2rem; /* Larger menu link font */
     padding-bottom: 5px;
-    border-bottom: 2px solid transparent;
+    border-bottom: 3px solid transparent; /* Increased border for hover effect */
     transition: border-bottom 0.3s ease;
 }
 
 .menu-links a:hover {
-    border-bottom: 2px solid white;
+    border-bottom: 3px solid white; /* Increased hover effect border */
 }
 
+/* Image gallery */
 .image-gallery {
     display: flex;
     justify-content: center;
@@ -91,16 +108,17 @@
 }
 
 .image-item img {
-    width: 250px;
-    height: 150px;
+    width: 300px; /* Increased image size */
+    height: 200px; /* Adjusted height */
     border-radius: 10px;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
 
 .image-item img:hover {
-    transform: scale(1.05);
+    transform: scale(1.1); /* Enhanced hover effect */
 }
+
 
 main {
     padding: 20px;
