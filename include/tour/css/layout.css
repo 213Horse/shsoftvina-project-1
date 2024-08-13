@@ -41,8 +41,8 @@
     font-weight: bold; /* Make links bold */
 }
 .temp-icon {
-    width: 24px; /* Adjust the size of the icon */
-    height: 24px;
+    width: 50px; /* Adjust the size of the icon */
+    height: 50px;
     margin-right: 8px; /* Space between icon and temperature text */
 }
 
@@ -55,6 +55,16 @@
     flex: 1;
     text-align: center; /* Canh giữa cho các phần tử trong .weather */
     align-self: center; /* Đặt div weather vào giữa theo chiều dọc */
+}
+
+.weather-img {
+    display: inline-block; /* Để đảm bảo khung viền bao quanh đúng kích thước của nội dung */
+    padding: 5px 15px; /* Khoảng cách giữa nội dung và viền, có thể điều chỉnh để phù hợp */
+    border: 2px solid white; /* Đặt viền màu trắng */
+    border-radius: 49px; /* Góc bo tròn cho khung viền */
+    font-size: 1.2rem !important; /* Điều chỉnh kích thước font chữ nếu cần */
+    font-weight: bold; /* Đặt chữ in đậm */
+    margin: 5px 0; /* Khoảng cách giữa các đoạn văn */
 }
 
 .content-header h1 {
@@ -134,18 +144,87 @@
     margin-top: 20px;
 }
 
+.image-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px; /* Đặt bo tròn cho khung ảnh */
+}
+
 .image-item img {
-    width: 300px; /* Increased image size */
-    height: 200px; /* Adjusted height */
-    border-radius: 10px;
-    object-fit: cover;
+    display: block;
+    width: 100%;
+    height: auto;
     transition: transform 0.3s ease;
+    border-radius: 15px; /* Đặt bo tròn cho hình ảnh */
 }
 
-.image-item img:hover {
-    transform: scale(1.1); /* Enhanced hover effect */
+.image-item::before {
+    content: '';
+    position: absolute;
+    bottom: -50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 93, 231, 0.8), transparent);
+    transition: bottom 0.5s ease-in-out;
+    z-index: 1;
+    opacity: 0; /* Ẩn ánh sáng ban đầu */
 }
 
+.image-item:hover::before {
+    bottom: 0;
+    opacity: 1; /* Hiển thị ánh sáng khi hover */
+}
+
+.image-item::after {
+    content: "남한산성";
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+    text-align: center;
+}
+
+.image-item:hover img {
+    transform: scale(1.1); /* Zoom ảnh khi hover */
+}
+
+.image-item:hover::after {
+    opacity: 1; /* Hiển thị nội dung văn bản khi hover */
+}
+
+.image-item::before,
+.image-item::after {
+    pointer-events: none; /* Đảm bảo lớp phủ không chặn sự kiện click */
+}
+
+.image-item .plus-sign {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white; /* Đường viền vòng tròn */
+    border-radius: 50%; /* Làm tròn đường viền */
+}
+
+.image-item:hover .plus-sign {
+    opacity: 1; /* Hiển thị dấu cộng khi hover */
+}
 
 
 /* Dropdown menu styles */
