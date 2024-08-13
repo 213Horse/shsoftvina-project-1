@@ -1,12 +1,12 @@
 /* Style cho header */
-header {
+.header {
     position: relative;
     background-image: url('./img/main/theme.png'); /* Thay thế bằng hình nền của bạn */
     background-size: cover;
     background-position: center;
     color: white;
     padding: 20px;
-    height: 600px;
+    height: 700px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -16,6 +16,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 0;
 }
 
 .logo img {
@@ -38,22 +39,26 @@ header {
     text-align: right;
 }
 
-.hero-section {
-    text-align: center;
-    margin-top: 100px;
+.weather p {
+    margin: 0;
 }
 
-.hero-section h1 {
+.hero-content {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.hero-content h1 {
     font-size: 3rem;
     margin-bottom: 10px;
 }
 
-.hero-section h2 {
+.hero-content h2 {
     font-size: 2rem;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
-.hero-section p {
+.hero-content p {
     font-size: 1.2rem;
     margin-bottom: 30px;
 }
@@ -69,6 +74,7 @@ header {
     color: white;
     text-decoration: none;
     font-size: 1rem;
+    padding-bottom: 5px;
     border-bottom: 2px solid transparent;
     transition: border-bottom 0.3s ease;
 }
@@ -81,24 +87,20 @@ header {
     display: flex;
     justify-content: center;
     gap: 20px;
-}
-
-.image-item {
-    text-align: center;
+    margin-top: 20px;
 }
 
 .image-item img {
-    width: 200px;
-    height: 120px;
+    width: 250px;
+    height: 150px;
     border-radius: 10px;
     object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
-.image-item p {
-    margin-top: 10px;
-    font-size: 1rem;
+.image-item img:hover {
+    transform: scale(1.05);
 }
-
 
 main {
     padding: 20px;
