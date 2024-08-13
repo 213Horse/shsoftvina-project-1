@@ -53,7 +53,8 @@
 
 .weather {
     flex: 1;
-    text-align: right; /* Canh phải cho các phần tử trong .weather */
+    text-align: center; /* Canh giữa cho các phần tử trong .weather */
+    align-self: center; /* Đặt div weather vào giữa theo chiều dọc */
 }
 
 .content-header h1 {
@@ -84,7 +85,7 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    align-items: flex-start; /* Đặt các phần tử bắt đầu từ trên cùng */
+    align-items: center; /* Canh giữa theo chiều dọc */
     gap: 20px; /* Khoảng cách giữa hai cột */
 }
 
@@ -100,7 +101,7 @@
 
 .hero-content p {
     font-size: 1.5rem; /* Increased font size */
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
 }
 
 /* Menu links */
