@@ -30,4 +30,31 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     });
+
+
+    // Lấy các phần tử a từ menu-links
+    const forestLink = document.getElementById("forest-link");
+    const waterLink = document.getElementById("water-link");
+    const cultureLink = document.getElementById("culture-link");
+
+    // Đường dẫn đến các ảnh
+    const forestImageUrl = "include/tour/css/img/main/Rectangle5.png";
+    const waterImageUrl = "include/tour/css/img/main/Rectangle4.png";
+    const cultureImageUrl = "include/tour/css/img/main/Rectangle6.png";
+
+    // Sự kiện click cho từng liên kết
+    forestLink.addEventListener("click", function(event) {
+        event.preventDefault(); // Ngăn chặn hành động mặc định của thẻ a
+        header.style.backgroundImage = `url('${forestImageUrl}')`;
+    });
+
+    waterLink.addEventListener("click", function(event) {
+        event.preventDefault();
+        header.style.backgroundImage = `url('${waterImageUrl}')`;
+    });
+
+    cultureLink.addEventListener("click", function(event) {
+        event.preventDefault();
+        header.style.backgroundImage = `url('${cultureImageUrl}')`;
+    });
 });
