@@ -39,28 +39,51 @@
     font-size: 1.2rem; /* Larger font size for navigation links */
     font-weight: bold; /* Make links bold */
 }
-
-.weather {
-    text-align: right;
-    font-size: 1.2rem; /* Adjusted the font size for better readability */
-}
-
-.weather p {
-    display: flex;
-    align-items: center;
-}
-
 .temp-icon {
     width: 24px; /* Adjust the size of the icon */
     height: 24px;
     margin-right: 8px; /* Space between icon and temperature text */
 }
 
+.weather {
+    flex: 1;
+    text-align: right; /* Canh phải cho các phần tử trong .weather */
+}
+
+.content-header {
+    flex: 2; /* Chiếm nhiều không gian hơn để tiêu đề lớn hơn */
+}
+
+.content-header h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.content-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.content-header p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
 
 /* Hero content */
 .hero-content {
-    text-align: center;
-    margin-top: 30px; /* Adjusted margin for better positioning */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: flex-start; /* Đặt các phần tử bắt đầu từ trên cùng */
+    gap: 20px; /* Khoảng cách giữa hai cột */
 }
 
 .hero-content h1 {
@@ -104,6 +127,7 @@
     display: flex;
     justify-content: center;
     gap: 20px;
+    width: 100%; /* Đảm bảo rằng gallery chiếm toàn bộ chiều rộng */
     margin-top: 20px;
 }
 
@@ -135,3 +159,9 @@ footer {
 footer p {
     font-size: 0.9rem;
 }
+
+html {
+    scroll-behavior: smooth; /* Thêm hiệu ứng cuộn mượt mà */
+}
+
+/* Giữ nguyên các phần CSS còn lại */

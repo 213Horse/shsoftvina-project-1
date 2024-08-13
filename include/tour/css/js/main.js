@@ -15,4 +15,19 @@ document.addEventListener("DOMContentLoaded", function() {
             header.style.backgroundImage = `url('${newImageUrl}')`;
         });
     });
+
+    // Thêm sự kiện cuộn trang mượt mà khi nhấn vào các liên kết trong thanh điều hướng
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault(); // Ngăn chặn hành vi mặc định của liên kết
+            const targetId = link.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
 });
