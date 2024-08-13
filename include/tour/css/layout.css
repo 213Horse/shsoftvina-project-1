@@ -45,13 +45,14 @@
     margin-right: 8px; /* Space between icon and temperature text */
 }
 
+.content-header {
+    flex: 2; /* Chiếm nhiều không gian hơn để tiêu đề lớn hơn */
+    text-align: left; /* Canh trái cho .content-header */
+}
+
 .weather {
     flex: 1;
     text-align: right; /* Canh phải cho các phần tử trong .weather */
-}
-
-.content-header {
-    flex: 2; /* Chiếm nhiều không gian hơn để tiêu đề lớn hơn */
 }
 
 .content-header h1 {
