@@ -138,11 +138,10 @@
                             <div class="buttons-page">
                                 <div class="button-box">
                                     <div id="btn"></div>
-                                    <button onclick="leftClick()" type="button" class="toggle-btn active">성남 9경</button>
-                                    <button onclick="rightClick()" type="button" class="toggle-btn">벚꽃 9경</button>
+                                    <button onclick="showTab(1)" type="button" class="toggle-btn active">성남 9경</button>
+                                    <button onclick="showTab(2)" type="button" class="toggle-btn">벚꽃 9경</button>
                                 </div>
-                                
-                                
+                        
                                 <div class="pagination">
                                     <button class="btn-page" onclick="prevImage()">◀</button>
                                     <button id="play-button" class="btn-page play" onclick="playImage()">▶</button>
@@ -150,8 +149,8 @@
                                     <button class="btn-page right" onclick="nextImage()">▶</button>
                                 </div>
                             </div>
-
-                            <div class="images">
+                        
+                            <div class="images" id="tab1">
                                 <div class="image-container">
                                     <img src="include/tour/css/img/main/Rectangle9.jpg" alt="Image">
                                     <div class="image-overlay">
@@ -176,9 +175,34 @@
                                     </div>
                                 </div>
                             </div>
-                            <br>
-                            
+                        
+                            <div class="images" id="tab2" style="display:none;">
+                                <div class="image-container">
+                                    <img src="include/tour/css/img/main/Rectangle13.jpg" alt="Image 4">
+                                    <div class="image-overlay">
+                                        <h3>4경 벚꽃길</h3>
+                                        <div class="arrow-icon">
+                                            <i class="fas fa-arrow-right"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="image-container">
+                                    <img src="include/tour/css/img/main/Rectangle14.jpg" alt="Image 5">
+                                    <div class="image-overlay">
+                                        <h3>5경 벚꽃놀이</h3>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </div>
+                                </div>
+                                <div class="image-container">
+                                    <img src="include/tour/css/img/main/Rectangle15.jpg" alt="Image 6">
+                                    <div class="image-overlay">
+                                        <h3>6경 벚꽃축제</h3>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                        
                         
                         
                     </div>

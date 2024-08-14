@@ -55,34 +55,121 @@ buttons.forEach(button => {
 });
 
 
-var images = [
-  "include/tour/css/img/main/Rectangle9.jpg",
-  "include/tour/css/img/main/Rectangle11.jpg",
-  "include/tour/css/img/main/Rectangle12.jpg"
+var tab1Images = [
+  {
+    src: "include/tour/css/img/main/Rectangle9.jpg",
+    overlayIndex: 0
+  },
+  {
+    src: "include/tour/css/img/main/Rectangle11.jpg",
+    overlayIndex: 1
+  },
+  {
+    src: "include/tour/css/img/main/Rectangle12.jpg",
+    overlayIndex: 2
+  }
 ];
 
-var currentIndex = 0;
-var playInterval; // Biến lưu khoảng thời gian để tự động chuyển ảnh
+var tab2Images = [
+  {
+    src: "include/tour/css/img/main/Rectangle13.jpg",
+    overlayIndex: 0
+  },
+  {
+    src: "include/tour/css/img/main/Rectangle14.jpg",
+    overlayIndex: 1
+  },
+  {
+    src: "include/tour/css/img/main/Rectangle15.jpg",
+    overlayIndex: 2
+  }
+];
 
-function changeMainImage(imageSrc) {
+var currentTab = 1;
+var currentIndex = 0;
+var playInterval;
+
+function changeMainImage(imageSrc, overlayIndex) {
   var mainImage = document.getElementById("main-display");
-  mainImage.classList.add('fade-out'); // Thêm lớp fade-out để bắt đầu hiệu ứng mờ dần
+  mainImage.classList.add('fade-out');
+  
+  document.querySelectorAll('.image-container').forEach(container => {
+    container.classList.remove('active-hover');
+  });
   
   setTimeout(function() {
     mainImage.src = imageSrc;
-    mainImage.classList.remove('fade-out'); // Loại bỏ lớp fade-out sau khi đã thay đổi nguồn ảnh
-  }, 1500); // Thời gian chờ phải khớp với thời gian chuyển đổi trong CSS
+    mainImage.classList.remove('fade-out');
+    
+    document.querySelectorAll('.images')[currentTab - 1].querySelectorAll('.image-container')[overlayIndex].classList.add('active-hover');
+  }, 1500);
 }
 
 function prevImage() {
-  currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
-  changeMainImage(images[currentIndex]);
+  currentIndex = (currentIndex > 0) ? currentIndex - 1 : getImages().length - 1;
+  var images = getImages();
+  changeMainImage(images[currentIndex].src, images[currentIndex].overlayIndex);
 }
 
 function nextImage() {
-  currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
-  changeMainImage(images[currentIndex]);
+  currentIndex = (currentIndex < getImages().length - 1) ? currentIndex + 1 : 0;
+  var images = getImages();
+  changeMainImage(images[currentIndex].src, images[currentIndex].overlayIndex);
 }
+
+
+// Khi trang tải xong, tự động áp dụng hover cho ảnh nhỏ tương ứng với ảnh chính
+document.addEventListener("DOMContentLoaded", function() {
+  var mainImageSrc = document.getElementById("main-display").src;
+  var initialImage = images.find(image => mainImageSrc.includes(image.src));
+  
+  if (initialImage) {
+    document.querySelectorAll('.image-container')[initialImage.overlayIndex].classList.add('active-hover');
+  }
+});
+
+function getImages() {
+  return currentTab === 1 ? tab1Images : tab2Images;
+}
+
+function showTab(tabNumber) {
+  currentTab = tabNumber;
+  currentIndex = 0;
+  
+  document.getElementById('tab1').style.display = (tabNumber === 1) ? 'flex' : 'none';
+  document.getElementById('tab2').style.display = (tabNumber === 2) ? 'flex' : 'none';
+  
+  buttons.forEach(btn => btn.classList.remove('active'));
+  buttons[tabNumber - 1].classList.add('active');
+  
+  document.getElementById('btn').style.left = (tabNumber === 1) ? '0' : '50%';
+  
+  var images = getImages();
+  changeMainImage(images[0].src, images[0].overlayIndex);
+}
+
+// Khi trang tải xong, hiển thị ảnh đầu tiên của tab 1
+document.addEventListener("DOMContentLoaded", function() {
+  showTab(1);
+});
+
+function playImage() {
+  if (!playInterval) {
+      playInterval = setInterval(function() {
+          nextImage();
+      }, 5000);
+      document.getElementById("play-button").style.display = "none";
+      document.getElementById("stop-button").style.display = "inline-block";
+  }
+}
+
+function stopPlay() {
+  clearInterval(playInterval);
+  playInterval = null;
+  document.getElementById("play-button").style.display = "inline-block";
+  document.getElementById("stop-button").style.display = "none";
+}
+
 
 function leftClick() {
   // Thay đổi giao diện hoặc thực hiện logic khác nhưng không thay đổi ảnh
@@ -99,20 +186,5 @@ function rightClick() {
 }
 
 
-function playImage() {
-  if (!playInterval) { // Kiểm tra nếu chưa có interval thì bắt đầu play
-      playInterval = setInterval(function() {
-          nextImage();
-      }, 5000); // Chuyển ảnh mỗi 2 giây
-      document.getElementById("play-button").style.display = "none";
-      document.getElementById("stop-button").style.display = "inline-block";
-  }
-}
 
-function stopPlay() {
-  clearInterval(playInterval);
-  playInterval = null;
-  document.getElementById("play-button").style.display = "inline-block";
-  document.getElementById("stop-button").style.display = "none";
-}
 

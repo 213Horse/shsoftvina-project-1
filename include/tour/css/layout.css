@@ -595,17 +595,14 @@ footer p {
     height: auto;
     z-index: 1; /* Đảm bảo icon nằm dưới thẻ h3 */
 }
-.gallery .image-container:hover img {
-    transform: scale(1.1);
-}
 
 .gallery .image-container:hover .image-overlay {
     opacity: 1;
 }
 
 .gallery .images img {
-    height: auto;
-    border-radius: 10px;
+    height: 28.5vh;
+    border-radius: 30px;
     object-fit: cover;
     pointer-events: none; /* Vô hiệu hóa tương tác với ảnh */
 }
@@ -639,6 +636,9 @@ footer p {
     border-radius: 10px;
     transition: opacity 1.5s ease-in-out;
     opacity: 1;
+}
+.image-container.active-hover .image-overlay {
+    opacity: 1; /* Hiển thị overlay khi ảnh nhỏ được chọn */
 }
 
 
