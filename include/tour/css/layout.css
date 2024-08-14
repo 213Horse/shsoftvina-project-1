@@ -115,7 +115,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 210px;
+    margin-top: 150px;
     gap: 20px;
 }
 
@@ -143,16 +143,17 @@
     display: flex;
     text-align: left;
     gap: 30px;
-    margin-bottom: 20px;
     border-bottom: 1px solid white;
+    margin-top: 110px;
 }
 
 .menu-links a {
+    position: relative;
     color: white;
     text-decoration: none;
-    font-size: 1.2rem; /* Larger menu link font */
+    font-size: 1.2rem; /* Kích thước font chữ cho liên kết */
     padding-bottom: 5px;
-    border-bottom: 3px solid transparent; /* Increased border for hover effect */
+    border-bottom: 3px solid transparent; /* Đường viền dưới của liên kết */
     transition: border-bottom 0.3s ease;
 }
 
@@ -183,7 +184,7 @@
     display: flex;
     justify-content: center;
     gap: 20px;
-    width: 100%; /* Đảm bảo rằng gallery chiếm toàn bộ chiều rộng */
+    width: 85%; /* Đảm bảo rằng gallery chiếm toàn bộ chiều rộng */
     margin-top: 20px;
 }
 
@@ -310,23 +311,494 @@
     cursor: pointer;
 }
 
+/* Pagination line style */
+.pagination-line {
+    position: absolute;
+    bottom: 0; /* Đặt đường phân trang nằm ngay trên đường kẻ trắng */
+    left: 0;
+    height: 4px;
+    width: 50%; /* Độ rộng bao phủ hai ảnh */
+    background-color: #f1f1f1; /* Màu của đường phân trang */
+    transition: transform 0.5s ease;
+    z-index: 10; /* Đảm bảo đường phân trang nằm trên menu-links */
+}
+
+
 
 main {
     padding: 20px;
 }
 
 footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: white;
     margin-top: 20px;
 }
+
+.footer-logo{
+    width: 632px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer-section{
+    display: flex;
+}
+.footer-border{
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 
 footer p {
     font-size: 0.9rem;
 }
+.footer-right img{
+    width: 130px;
+}
 
+/* /////////////////////////////////////////////// first section  /////////////////////////////////////////////// */ 
+.content {
+    display: flex;
+    justify-content: space-between; /* Chia đều khoảng cách giữa các cột */
+    padding: 20px 0;
+}
+
+.content-1, .content-2 {
+    width: 48%; /* Mỗi cột chiếm khoảng 50% không gian, điều chỉnh nếu cần */
+}
+
+.first-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+.first-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.header h1 {
+    font-size: 36px;
+    color: #dddddd;
+    position: relative;
+    z-index: -1;
+    left: -10px;
+}
+
+.navigation button {
+    background-color: transparent;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.content h2 {
+    font-size: 28px;
+    color: #333;
+}
+
+.content p {
+    font-size: 16px;
+    color: #666;
+}
+
+.gallery {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+/* Adjust the button styles */
+.gallery .buttons {
+    display: flex;
+    flex-direction: row; /* Change to row to align buttons horizontally */
+    margin-bottom: 20px; /* Add margin to separate from the images */
+}
+
+.gallery .buttons button {
+    background-color: #0066cc; /* Keep the same background color */
+    color: white;
+    border: none;
+    border-radius: 20px; /* Adjust the border-radius for rounded buttons */
+    padding: 10px 20px;
+    margin: 0 10px; /* Add more space between buttons */
+    cursor: pointer;
+    font-size: 16px; /* Ensure font size matches the design */
+}
+
+/* Adjust the image gallery styles */
+.gallery .images {
+    display: flex;
+    margin-left: 0; /* Remove margin to align images with buttons */
+    justify-content: center; /* Center the images */
+    gap: 10px; /* Add space between images */
+}
+
+.gallery .images img {
+    width: 200px; /* Increase width to match the sample image size */
+    height: auto; /* Keep height auto for proper scaling */
+    margin: 0;
+    border-radius: 10px; /* Keep the border radius */
+    object-fit: cover; /* Ensure the images cover their containers properly */
+}
+
+/* Adjust the main image styles */
+.main-image {
+    margin-left: 20px; /* Add margin to separate from the gallery */
+    width: 100%;
+    max-width: 600px; /* Limit the max width to match the sample */
+}
+
+.main-image img {
+    width: 100%;
+    border-radius: 10px;
+    transition: opacity 1.5s ease-in-out; /* Thêm hiệu ứng chuyển đổi */
+    opacity: 1; /* Đảm bảo ảnh được hiển thị đầy đủ */
+}
+
+.main-image img.fade-out {
+    opacity: 0; /* Đặt opacity về 0 để làm mờ ảnh */
+}
+
+
+.seong-nam-background {
+    margin: 0;
+    padding: 0;
+}
+.seong-nam-background h1 {
+    font-size: 140px;
+    color: #F2F4F4;
+    margin: 0;
+    padding: 0;
+}
+
+.buttons-page {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-box {
+    width: 220px;
+    height: 50px;
+    margin: 35px;
+    display: flex;
+    position: relative;
+    border-radius: 30px;
+    background: #fff;
+    border: 1px solid #005BAC;
+}
+.toggle-btn {
+    padding: 10px 20px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+    text-align: center;
+}
+#btn {
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: #005BAC;
+    border-radius: 30px;
+    transition: .5s;
+}
+.pagination {
+    display: flex;
+    gap: 0px;
+    align-items: center;
+}
+
+.btn-page {
+    cursor: pointer;
+}
+.btn-page img {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    width: 25px;
+}
+button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+.btn-page {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+}
+.btn-page.play {
+    border-image-source: linear-gradient(90deg, #0E8C84 0%, #FFFFFF 100%);
+    border-image-slice: 1; /* Ensures the gradient border is visible */
+}
+.btn-page.right {
+    background: #067F77;
+    color: white;
+}
+
+/* /////////////////////////////////////////////// themes-section  /////////////////////////////////////////////// */ 
+
+  .themes-section h1{
+    font-size:70px;
+    justify-content: center;
+  }
+
+.wrapper{
+    align-items: center;
+    justify-content: center;
+}
+.theme-slider-container{
+    height: 400px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+.card{
+    width: 300px;
+    border-radius: .75rem;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    border-radius: .5rem;
+    margin: 0 10px;
+    display:flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28, -0.03, 0 , .99);
+    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+}
+
+.card > .row {
+    color:white;
+    display:flex;
+    flex-wrap: nowrap;
+}
+
+.card >.row >.icon {
+ background: #233;
+ color: white;
+ border-radius: 50%;
+ width: 50px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin: 15px;
+}
+.card > .row > .description{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80px;
+    width: 520px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+}
+.description p{
+    color: #b0b0ba;
+    padding-top: 5px ;
+}
+.description h4{
+    text-transform: uppercase;
+}
+.theme-slider-container input{
+    display: none;
+}
+.theme-slider-container input:checked + label{
+    width: 900px;
+    height: auto;
+}
+
+.theme-slider-container input:checked + label .description{
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+.card[for="c1"]{
+
+    background-image: url("https://s3-alpha-sig.figma.com/img/4232/57a1/c71ae867ceaf88f03c292b274da44528?Expires=1724630400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=KvnWJyolkAdriwombL8j527NH9WY02v7vnwJyx10JJPAYC5dK6dD0c0eXGPqVkGKIp6Y-jN27xoGUKH2Zgt4MvulP87PK1ReCLMSQyA0wR8pfOT-gb8c3jXd3bHfJwF5beFtWotGxMVzPLSBalh6me1KzAXuQQ-Asqb1WneCqAO7286-4DgPiMbA6tuwzKXEbA8LUV7VRt79A7VSpS8BdModcreeQ1RKYCx8acqMoabkafl8kllwMddmbH-IRPd5-3bE9N8UKRhxSrcqHnUW-MJtk7PogPrFfpzuCWHoCye75IfOlIPtDSLMrpIXoDaVJ9LFUyta0MCOOmFsbtByaA__");
+}
+.card[for="c2"]{
+    background-image: url("https://s3-alpha-sig.figma.com/img/326d/3339/f1d31977c07b820125706b15433e39ee?Expires=1724630400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=PW3-mnZz8G6K-flsndn~A-eaOVX~tz3tDgK8OFf2SSqRvZea6LN~WKWstplKzV6C2UVBkxjIHG9Lihobl2MZO2QuI9pqEuosSaTzeVnxG-eqvdGM7WGhgldLAqvrkQLf-lkKrflih6ENgml3jJD~YwIKCfLQ3YHH8zm7lHqIpE0S1XwYGUt7vTwg0Ef-bei13MA38TdsT-t9JvwjEEADQUv7YVuXb3AQcx~CHL~Pfh1XtFRTUrEfP5uWgHbo81FhF5ODlFyMhGS8eAmSKvBczv4PMX9N2tMK0b~S~Hlt~p6IkWlZ~URR4YMOdcRcBnMjElp3Lr2qOzlE5YX6NO9dlA__");
+}
+
+.card[for="c3"]{
+    background-image: url("https://s3-alpha-sig.figma.com/img/aa33/2ffb/93301e046f4929e4c0c1d18b0b1a32f8?Expires=1724630400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=gE3allWHjV73GfmqP5t9U-5195hMhG5Efj5CAiRuqFIZ2ThjzffvIb3lF6Li5IKGmyyIg3607eJG4aKTuFXsuAx4vl0QL78uy9WTQ4iYXPpTK1S8r8eoi3Dcl4NTxecFFSEAiHTkHzj4GxZuBtagfGXTpQAaXHwWsQ1iJw9hJnvP3PbUF6KYERPnVRQMPV8OuBsdVEiEwnXzLE38XlkORP1mpBRET1jw9g0ZxMHb-wXD62SDmD3sD397E0gJ8PobxbW8znHnob9aMXKoI-o451THKVXdmAEX1ZIEUjx0HBXRFAn0dvNO8qNUBMWHE0XKMzeXslXl1HseVyqk8xaHGw__");
+}
+
+/* /////////////////////////////////////////////// event schedule  /////////////////////////////////////////////// */ 
+
+.carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+  }
+  
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #005BAC;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  .event-schedule h2{
+    font-size: 70px;
+    text-align: center;
+  }
+  .event-item {
+    background-color: #E8F5FF;
+    padding: 20px;
+    border-radius: 8px;
+    width: 30%;
+    text-align: center;
+    margin: 0 10px;
+    flex: 0 0 auto;
+  }
+  
+  .date-month {
+    background: white;
+    width: 130px;
+    height: 130px;
+    border-radius: 1rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .date-month h2 {
+    font-size: 3rem;
+  }
+  
+  .event-detail {
+    font-size: 14px;
+    margin: 10px;
+  }
+  
+  .event-paragraph {
+    color: #005BAC;
+    font-weight: bold;
+    border-bottom: 1px solid black;
+  }
+  .event-button{
+    
+    width: 190px;
+    height: 50px;
+    border: 1px solid #067F77;
+    border-radius: 40px
+  }
+  .event-button:hover{
+    transition: .3s ease;
+    background: #067F77;
+  }
+/* /////////////////////////////////////////////// event schedule  /////////////////////////////////////////////// */ 
+.event-intro h2{
+    font-size: 70px;
+    text-align: center;
+}
+.event-intro {
+    padding: 20px;
+  }
+  
+  .intro-content {
+    display: flex;
+    height: 500px;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    /* text-align: center; */
+  }
+  
+  .image-collage {
+  width: 500px;
+  border-radius: 100px 10px 10px 10px; 
+  overflow: hidden;
+  }
+  .image-collage img{
+    width: 100%;
+    }
+  
+
+  
+  .intro-paragraph {
+    height: 100%;
+    width: 30%;
+    margin: 50px;
+    /* text-align: center;
+    justify-content: center;
+    align-items: center; */
+    font-size: 16px;
+    color: #333;
+  }
+  .tags{
+    display: flex;
+    /* align-items: center;
+    justify-content: center;
+    text-align: center; */
+  }
+  .tag1::before,
+.tag2::before {
+  content: "•";
+  color: green; 
+  font-size: 20px; 
+  margin-right: 10px; 
+  vertical-align: middle; 
+}
+
+
+.useful-links h2{
+    font-size: 70px;
+    text-align: center;
+}
+.links{
+    border:1px solid lightgray;
+    border-radius: 10px;
+    padding: 40px;
+}
 html {
     scroll-behavior: smooth; /* Thêm hiệu ứng cuộn mượt mà */
 }
