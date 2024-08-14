@@ -40,7 +40,16 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Thêm sự kiện cuộn trang mượt mà khi nhấn vào các liên kết trong thanh điều hướng
-    const navLinks = document.querySelectorAll('.nav-links a');
+    const navLinksContainer = document.querySelector('.nav-links');
+const menuToggle = document.querySelector(".menu-toggle");
+
+if (menuToggle && navLinksContainer) { // Kiểm tra xem cả hai phần tử có tồn tại không
+    menuToggle.addEventListener("click", function() {
+        navLinksContainer.classList.toggle("show-menu");
+    });
+} else {
+    console.error('Không tìm thấy phần tử .menu-toggle hoặc .nav-links.');
+}
 
     navLinks.forEach(link => {
         link.addEventListener('click', (event) => {
