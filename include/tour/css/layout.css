@@ -611,12 +611,10 @@ footer p {
 .main-image1 {
     position: absolute; /* Đặt vị trí tuyệt đối */
     top: 50%; /* Đặt vị trí nằm giữa theo chiều dọc */
-    left: 50%; /* Đặt vị trí nằm giữa theo chiều ngang */
-    transform: translate(-50%, -50%); /* Dịch chuyển để hình ảnh được căn giữa */
-    width: 50%; /* Đặt chiều rộng của main-image1, bạn có thể điều chỉnh theo nhu cầu */
-    z-index: 10; /* Đảm bảo hình ảnh nằm trên */
+    left: 22.2%; /* Đặt vị trí nằm giữa theo chiều ngang */
+    width: 80%; /* Đặt chiều rộng của main-image1, bạn có thể điều chỉnh theo nhu cầu */
+    z-index: 1; /* Đặt z-index thấp hơn */
 }
-
 .main-image1 img {
     width: 100%;
     border-radius: 10px;
@@ -626,9 +624,12 @@ footer p {
 /* Adjust the main image styles */
 
 .main-image {
-    width: 100%;
-    max-width: 600px;
-    position: relative; /* Đặt vị trí relative để các phần tử con có thể được căn chỉnh dựa trên phần tử này */
+    position: absolute; /* Đặt vị trí tuyệt đối để có thể điều chỉnh vị trí */
+    top: 350px; /* Đặt vị trí nằm giữa theo chiều dọc */
+    left: 65%; /* Đặt vị trí nằm giữa theo chiều ngang */
+    transform: translate(-50%, -50%); /* Dịch chuyển để hình ảnh được căn giữa */
+    width: 60%; /* Đặt chiều rộng của main-image, bạn có thể điều chỉnh theo nhu cầu */
+    z-index: 2; /* Đặt z-index cao hơn để nằm trên main-image1 */
 }
 
 .main-image img {
