@@ -1,3 +1,88 @@
+
+const images = document.querySelectorAll('.image-slider .image-item');
+const displayImage = document.querySelector('.scroller-image-container img');
+const caption = document.querySelector('.scroller-image-container p');
+let index = 1;
+const totalSlides = 3;
+function switchSlide() {
+  const currentInput = document.querySelector('input[name="slide"]:checked');
+  currentInput.checked = false;
+
+  // Move to the next slide
+  index = (index % totalSlides) + 1;
+
+  // Check the next input
+  document.getElementById(`c${index}`).checked = true;
+}
+var container = document.getElementById('event-container');
+var slider = document.getElementById('slider');
+var slides = document.getElementsByClassName('slide');
+var buttons = document.getElementsByClassName('btn');
+
+var slideWidth = 473
+var slidesPerPage = 0;
+var slidesCount = slides.length;
+var currentPosition = 0;
+var currentMargin = 0;
+
+function checkWidth() {
+    containerWidth = container.offsetWidth;
+    setParams(containerWidth);
+}
+
+function setParams(w) {
+    if (w < 551) {
+        slidesPerPage = Math.floor(w / slideWidth);
+    } else if (w < 901) {
+        slidesPerPage = Math.floor(w / slideWidth);
+    } else if (w < 1101) {
+        slidesPerPage = Math.floor(w / slideWidth);
+    } else {
+        slidesPerPage = Math.floor(w / slideWidth);
+    }
+    slidesCount = Math.max(0, slides.length - slidesPerPage);
+    if (currentPosition > slidesCount) {
+        currentPosition = slidesCount;
+    }
+    currentMargin = -currentPosition * slideWidth;
+    slider.style.marginLeft = currentMargin + 'px';
+    updateButtons();
+}
+
+function updateButtons() {
+    if (currentPosition === 0) {
+        buttons[0].classList.add('inactive');
+    } else {
+        buttons[0].classList.remove('inactive');
+    }
+    if (currentPosition >= slidesCount) {
+        buttons[1].classList.add('inactive');
+    } else {
+        buttons[1].classList.remove('inactive');
+    }
+}
+function slideLeft() {
+  if (currentPosition < slidesCount) {
+    currentPosition++;
+    currentMargin = -currentPosition * slideWidth;
+    slider.style.marginLeft = currentMargin + 'px';
+    updateButtons();
+  }
+}
+
+function slideRight() {
+  if (currentPosition > 0) {
+    currentPosition--;
+    currentMargin = -currentPosition * slideWidth;
+    slider.style.marginLeft = currentMargin + 'px';
+    updateButtons();
+  }
+}
+
+window.addEventListener("resize", checkWidth);
+checkWidth();
+
+
 const navigationButtons = document.querySelectorAll('.navigation button');
 const toggleButtons = document.querySelectorAll('.toggle-btn');
 const btnMover = document.getElementById('btn');

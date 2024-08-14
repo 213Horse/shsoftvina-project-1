@@ -44,8 +44,8 @@ body {
 
 
     .logo img {
-        width: 80%; /* Giảm kích thước logo */
-        height: auto; /* Đảm bảo logo không bị co kéo */
+        width: 80% !important; /* Giảm kích thước logo */
+        height: auto !important; /* Đảm bảo logo không bị co kéo */
         margin-bottom: 15px; /* Thêm khoảng cách giữa logo và navbar */
     }
 
