@@ -97,33 +97,54 @@
             <div class="first-container">
                 <div class="header1">
                     <div class="navigation">
-                        <button>관광 안내 책자 및 지도</button>
+                        <h2>
+                            <div class="icon-nav">
+                            <img src="include\tour\css\img\layout\Vector.jpg" alt="Icon 1">
+                        </div>
+                            관광 안내 책자 및 지도
+                        
+                        </h2>
                         <button>신청하기</button>
-                        <button>이야기가 있는 판교 워킹투어</button>
+                        <div class="divider"></div> <!-- Đường phân cách -->
+                        <h2>
+                            <div class="icon-nav">
+                            <img src="include\tour\css\img\layout\Vector1.jpg" alt="Icon 2">
+                        </div>
+                            이야기가 있는 판교 워킹투어
+                        </h2>
                         <button>신청하기</button>
-                        <button>해설이 있는 문화관광지</button>
+                        <div class="divider"></div> <!-- Đường phân cách -->
+                        <h2>
+                            <div class="icon-nav">
+                            <img src="include\tour\css\img\layout\Vector2.jpg" alt="Icon 3">
+                        </div>
+                            해설이 있는 문화관광지
+                        </h2>
                         <button>신청하기</button>
                     </div>
                 </div>
+                
                 <div class="content">
                     <div class="content-1">
                         <div class="seong-nam-background">
-                            <h1>Seong Nam</h1>
+                            <h1>Seong-Nam</h1>
                         </div>
-                        <h2>아름다운 경관과 문화가 어우러진 성남</h2>
+                        <h2>아름다운 경관과 문화가</h2>
+                        <h2>어우러진 성남</h2>
                         <p>다양한 성남의 아름다운 모습을 만나보세요!</p>
                         <div class="gallery">
                             <div class="buttons-page">
                                 <div class="button-box">
                                     <div id="btn"></div>
-                                    <button onclick="leftClick()" type="button" class="toggle-btn">성남 9경</button>
+                                    <button onclick="leftClick()" type="button" class="toggle-btn active">성남 9경</button>
                                     <button onclick="rightClick()" type="button" class="toggle-btn">벚꽃 9경</button>
                                 </div>
+                                
+                                
                                 <div class="pagination">
                                     <button class="btn-page" onclick="prevImage()">◀</button>
                                     <button id="play-button" class="btn-page play" onclick="playImage()">▶</button>
-<button id="stop-button" class="btn-page stop" onclick="stopPlay()" style="display:none;">⏸️</button>
-
+                                    <button id="stop-button" class="btn-page stop" onclick="stopPlay()" style="display:none;">⏸️</button>
                                     <button class="btn-page right" onclick="nextImage()">▶</button>
                                 </div>
                             </div>
@@ -133,12 +154,17 @@
                                 <img src="include/tour/css/img/main/Rectangle12.jpg" alt="Image 3" onclick="changeMainImage(this)">
                             </div>
                         </div>
+                        
+                        
                     </div>
                     <div class="content-2">
                         <div class="main-image">
                             <img id="main-display" src="include/tour/css/img/main/Rectangle9.jpg" alt="Main Image">
                         </div>
-                    </div>
+                        <div class="main-image1">
+                            <img src="include/tour/css/img/layout/Ellipse1.jpg" alt="Main Image 1">
+                        </div>
+                    </div>                    
                 </div>
             </div>
         </section>
