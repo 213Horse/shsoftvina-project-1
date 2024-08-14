@@ -54,8 +54,8 @@
     font-weight: bold; /* Make links bold */
 }
 .temp-icon {
-    width: 72px; /* Adjust the size of the icon */
-    height: 72px;
+    width: 50px; /* Adjust the size of the icon */
+    height: 50px;
     margin-right: 8px; /* Space between icon and temperature text */
 }
 
@@ -74,12 +74,21 @@
 
 .weather-img {
     display: inline-block; /* Để đảm bảo khung viền bao quanh đúng kích thước của nội dung */
-    padding: 5px 15px; /* Khoảng cách giữa nội dung và viền, có thể điều chỉnh để phù hợp */
+    padding: 4px 15px; /* Khoảng cách giữa nội dung và viền, có thể điều chỉnh để phù hợp */
     border: 2px solid white; /* Đặt viền màu trắng */
     border-radius: 49px; /* Góc bo tròn cho khung viền */
     font-size: 1.2rem !important; /* Điều chỉnh kích thước font chữ nếu cần */
     font-weight: bold; /* Đặt chữ in đậm */
-    margin: 5px 0; /* Khoảng cách giữa các đoạn văn */
+    margin: 8px 0; /* Khoảng cách giữa các đoạn văn */
+    height: fit-content;
+    width: 165px;
+}
+.weather-img p{
+    height: fit-content;
+    width: 165px;
+}
+.weather-img-content{
+    font-size: 1.5rem;
 }
 
 .content-header h1 {
@@ -106,8 +115,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 350px;
-    padding: 50px;
+    margin-top: 210px;
     gap: 20px;
 }
 
@@ -129,10 +137,6 @@
     margin-bottom: 20px;
 }
 
-.hero-content p {
-    font-size: 1.5rem; /* Increased font size */
-    /* margin-bottom: 30px; */
-}
 
 /* Menu links */
 .menu-links {
