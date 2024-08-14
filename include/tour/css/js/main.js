@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const navbar = document.querySelector(".navbar");
     const imageItems = document.querySelectorAll(".image-item img");
     const header = document.querySelector(".header");
+    const menuLinks = document.querySelectorAll('.menu-links a');
     window.addEventListener("scroll", function() {
         if (window.scrollY > 50) { // Kiểm tra nếu cuộn trang vượt quá 50px
             navbar.classList.add("scrolled");
@@ -34,6 +35,25 @@ document.addEventListener("DOMContentLoaded", function() {
             
             if (targetSection) {
                 targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+
+    // Thêm sự kiện click cho các liên kết trong menu-links
+    menuLinks.forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault(); // Ngăn chặn hành vi mặc định của liên kết
+
+            // Xóa lớp active khỏi tất cả các liên kết
+            menuLinks.forEach(link => link.classList.remove('active'));
+
+            // Thêm lớp active cho liên kết hiện tại
+            link.classList.add('active');
+
+            // Lấy URL ảnh tương ứng và đặt làm background cho header
+            const newImageUrl = link.dataset.imageUrl; // Giả sử bạn thêm data-image-url vào mỗi thẻ a
+            if (newImageUrl) {
+                header.style.backgroundImage = `url('${newImageUrl}')`;
             }
         });
     });
