@@ -3,7 +3,26 @@
     margin: 20px 0;
     padding: 20px;
     border-radius: 8px;
+    height: 93vh;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.event-schedule{
+    height: auto;
+}
+.event-intro{
+    height: auto;
+}
+.useful-links{
+    height: auto;
+}
+
+.theme-slider-container input:checked + label{
+    height: 600px !important;
+    width: 1182px !important;
+}
+.card {
+    height: 600px !important;
+    width: 252px !important;
 }
 
 .first-section h2, .themes-section h2, .event-schedule h2, .event-intro h2, .useful-links h2 {
@@ -48,6 +67,8 @@
     text-align: center;
 }
 
+
+
 .useful-links .links {
     display: flex;
     justify-content: space-between;
@@ -69,3 +90,4 @@
 .useful-links a:hover {
     background-color: #0056b3;
 }
+
