@@ -17,3 +17,201 @@ body {
     color: #333;
     background-color: #f4f4f4;
 }
+@media (min-width: 1200px) {
+    .menu-toggle{
+        display: none; 
+    }
+}
+/* Large devices (desktops, 1200px and up) */
+@media (max-width: 1200px) {
+    body {
+        font-size: 15px;
+        /* Adjust other styles as needed */
+    }
+    .show-menu {
+        display: flex !important;
+        animation: slideIn 0.3s ease-out; 
+    }
+   
+    .header {
+        height: auto; 
+        padding: 20px 0; 
+        text-align: center;
+    }
+
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+
+    .logo img {
+        width: 80% !important; 
+        height: auto !important; 
+        margin-bottom: 15px;
+    }
+
+    .nav-links {
+        display: none !important; 
+        flex-direction: column; 
+        width: 100%; 
+        gap: 15px; 
+        position: absolute;
+        top: 60px; 
+        right: 0; 
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 20px; 
+        z-index: 999; /
+    }
+    .nav-links.show-menu {
+        display: flex !important; 
+    }
+    .menu-toggle {
+        display: block; 
+        font-size: 1.5rem; 
+        cursor: pointer;
+        color: white;
+    }
+
+    .navbar.scrolled .menu-toggle {
+        color: white; 
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: left;
+    }
+
+    .nav-links li a {
+        font-size: 1rem; 
+        padding: 10px 0; 
+    }
+    .search-icon {
+        font-size: 1.2rem; 
+        margin-top: 10px; 
+    }
+
+    .content-header h1, 
+    .content-header h2 {
+        font-size: 2rem;
+    }
+
+    .content-header p {
+        font-size: 1rem;
+    }
+
+    .hero-content {
+        margin-top: 50px;
+        gap: 15px; 
+    }
+
+    .header-top {
+        flex-direction: column;
+        width: 100%; 
+        gap: 10px;
+        padding: 0 20px;
+    }
+
+    .menu-links {
+        flex-direction: column; 
+        width: 100%;
+        gap: 10px;
+        border-bottom: none; 
+        margin-top: 50px;
+    }
+
+    .image-gallery {
+        flex-direction: column; 
+        width: 100%; 
+        gap: 15px; 
+    }
+
+    .image-item img {
+        width: 100%; 
+        border-radius: 10px; 
+    }
+
+    .weather {
+        position: static; 
+        text-align: center;
+        margin-bottom: 20px; 
+    }
+
+    .weather-img, 
+    .weather-img-content {
+        font-size: 1rem; 
+    }
+
+    .footer {
+        flex-direction: column; 
+        padding: 20px; 
+        text-align: center; 
+    }
+
+    .footer-section {
+        flex-direction: column; 
+        margin-top: 20px; 
+    }
+}
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Medium devices (tablets, 992px and up) */
+@media (max-width: 992px) {
+    body {
+        font-size: 14px;
+        /* Adjust other styles as needed */
+    }
+}
+
+/* Small devices (landscape phones, 768px and up) */
+@media (max-width: 768px) {
+    body {
+        font-size: 13px;
+        /* Adjust other styles as needed */
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 576px) {
+    body {
+        font-size: 12px;
+        /* Adjust other styles as needed */
+    }
+    .content-header h2{
+        font-size: 1rem !important;
+    }
+    .navbar {
+        width: 51% !important;
+    }
+
+}
+
+@media (max-width: 390px) {
+    body {
+        font-size: 11px;
+        /* Adjust other styles as needed */
+    }
+    .content-header h2{
+        font-size: 1rem !important;
+    }
+    .navbar {
+        width: 49% !important;
+    }
+    .header-top {
+        flex-direction: column;
+        justify-content: center !important; 
+        align-items: center !important; 
+    }
+
+}
