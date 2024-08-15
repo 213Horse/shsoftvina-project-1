@@ -51,17 +51,7 @@ if (menuToggle && navLinksContainer) { // Kiểm tra xem cả hai phần tử c�
     console.error('Không tìm thấy phần tử .menu-toggle hoặc .nav-links.');
 }
 
-    navLinks.forEach(link => {
-        link.addEventListener('click', (event) => {
-            event.preventDefault(); // Ngăn chặn hành vi mặc định của liên kết
-            const targetId = link.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetId);
-            
-            if (targetSection) {
-                targetSection.scrollIntoView({ behavior: 'smooth' });
-            }
-        });
-    });
+    
 
    // Hiển thị chấm tròn ở liên kết đầu tiên khi mở trang
    menuLinks[0].classList.add('active');
@@ -114,6 +104,17 @@ if (menuToggle && navLinksContainer) { // Kiểm tra xem cả hai phần tử c�
             const newImageUrl = link.dataset.imageUrl; // Giả sử bạn thêm data-image-url vào mỗi thẻ a
             if (newImageUrl) {
                 header.style.backgroundImage = `url('${newImageUrl}')`;
+            }
+        });
+    });
+    navLinks.forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault(); // Ngăn chặn hành vi mặc định của liên kết
+            const targetId = link.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth' });
             }
         });
     });

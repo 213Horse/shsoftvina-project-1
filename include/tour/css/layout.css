@@ -99,7 +99,7 @@
 }
 
 .content-header h2 {
-    font-size: 4rem !important;
+    font-size: 4rem;
     margin-bottom: 20px;
     font-weight: bold; /* Thêm thuộc tính này để in đậm chữ */
 }
@@ -133,7 +133,6 @@
 }
 
 .hero-content h2 {
-    font-size: 2.5rem; /* Slightly larger subtitle font */
     margin-bottom: 20px;
 }
 
@@ -360,6 +359,38 @@ footer p {
 .footer-right img{
     width: 130px;
 }
+.circle-image {
+    position: absolute;
+    bottom: -30px; /* Điều chỉnh khoảng cách từ dưới */
+    right: -30px;  /* Điều chỉnh khoảng cách từ phải */
+    width: 100px; /* Kích thước hình tròn, điều chỉnh nếu cần */
+    height: 100px; /* Đảm bảo hình tròn có kích thước bằng nhau */
+    z-index: 3; /* Đặt z-index cao hơn để nằm trên các hình khác */
+}
+.circle-image img {
+    margin-left: 1px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; /* Đảm bảo hình ảnh có hình dạng tròn */
+    object-fit: cover; /* Giữ tỉ lệ của ảnh trong khung tròn */
+}
+
+
+.circle-image1 {
+    position: absolute;
+    bottom: -30px; /* Điều chỉnh khoảng cách từ dưới */
+    right: -30px;  /* Điều chỉnh khoảng cách từ phải */
+    width: 100px; /* Kích thước hình tròn, điều chỉnh nếu cần */
+    height: 100px; /* Đảm bảo hình tròn có kích thước bằng nhau */
+    z-index: 3; /* Đặt z-index cao hơn để nằm trên các hình khác */
+}
+.circle-image1 img {
+    margin-left: 1px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; /* Đảm bảo hình ảnh có hình dạng tròn */
+    object-fit: cover; /* Giữ tỉ lệ của ảnh trong khung tròn */
+}
 
 /* /////////////////////////////////////////////// first section  /////////////////////////////////////////////// */ 
 .content {
@@ -551,7 +582,7 @@ footer p {
     top: 0;
     left: 0;
     width: 100%;
-    height: 91%;
+    height: 78%;
     background-color: rgba(0, 102, 204, 0.7); /* Nền xanh có độ trong suốt */
     display: flex;
     justify-content: center;
@@ -572,23 +603,23 @@ footer p {
 
 .arrow-icon {
     position: absolute;
-    bottom: 1px; /* Đẩy mũi tên xuống dưới để nó xén vào phần dưới */
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #66cc99; /* Nền xanh cho mũi tên */
+    bottom: 20px; /* Đẩy mũi tên xuống dưới để nó xén vào phần dưới */
+    left: 28%;
     padding: 10px;
-    border-radius: 50%;
     width: 60px; /* Kích thước bao quanh của icon */
     height: 60px;
     display: flex;
+    transform: rotate(320deg); /* Xoay icon theo góc 45 độ */
+    color: white; /* Màu trắng */
     justify-content: center;
+    font-size: 30px;
     align-items: center;
     z-index: 2; /* Đảm bảo mũi tên nằm trên phần overlay */
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3); /* Thêm bóng để tách biệt icon */
 }
 .arrow-icon img {
     width: 20px; /* Kích thước của icon mũi tên */
     height: auto;
+    transform: rotate(45deg); 
 }
 .gallery .image-overlay img {
     width: 30px; /* Kích thước icon mũi tên */
@@ -601,7 +632,7 @@ footer p {
 }
 
 .gallery .images img {
-    height: 28.5vh;
+    height: 24.5vh;
     border-radius: 30px;
     object-fit: cover;
     pointer-events: none; /* Vô hiệu hóa tương tác với ảnh */
@@ -609,32 +640,33 @@ footer p {
 
 
 .main-image1 {
+    margin-top: 531px;
     position: absolute; /* Đặt vị trí tuyệt đối */
-    top: 50%; /* Đặt vị trí nằm giữa theo chiều dọc */
-    left: 22.2%; /* Đặt vị trí nằm giữa theo chiều ngang */
-    width: 80%; /* Đặt chiều rộng của main-image1, bạn có thể điều chỉnh theo nhu cầu */
+    left: 4%; /* Đặt vị trí nằm giữa theo chiều ngang */
+    width: 100%; /* Đặt chiều rộng của main-image1, bạn có thể điều chỉnh theo nhu cầu */
     z-index: 1; /* Đặt z-index thấp hơn */
 }
 .main-image1 img {
     width: 100%;
     border-radius: 10px;
     object-fit: cover;
+    clip-path: inset(0 1.5% 0 0); /* Cắt xén 20% cạnh phải */
 }
 
 /* Adjust the main image styles */
 
 .main-image {
     position: absolute; /* Đặt vị trí tuyệt đối để có thể điều chỉnh vị trí */
-    top: 350px; /* Đặt vị trí nằm giữa theo chiều dọc */
-    left: 65%; /* Đặt vị trí nằm giữa theo chiều ngang */
+    top: 317px; /* Đặt vị trí nằm giữa theo chiều dọc */
+    left: 56%; /* Đặt vị trí nằm giữa theo chiều ngang */
     transform: translate(-50%, -50%); /* Dịch chuyển để hình ảnh được căn giữa */
     width: 60%; /* Đặt chiều rộng của main-image, bạn có thể điều chỉnh theo nhu cầu */
     z-index: 2; /* Đặt z-index cao hơn để nằm trên main-image1 */
 }
 
 .main-image img {
-    width: 100%;
-    border-radius: 10px;
+    width: 110%;
+    border-radius: 155px;
     transition: opacity 1.5s ease-in-out;
     opacity: 1;
 }
@@ -810,6 +842,7 @@ button {
 
 .card > .row {
     color:white;
+    margin: 10px;
     /* display:flex; */
     /* flex-wrap: nowrap; */
 }
@@ -823,11 +856,12 @@ button {
  justify-content: center;
  align-items: center;
  margin: 15px;
+ line-height: 0.1;
+
 }
 .card > .row > .description{
     color: white;
     display: flex;
-    justify-content: center;
     flex-direction: column;
     overflow: hidden;
     height: 80px;
@@ -838,8 +872,8 @@ button {
     transition: all .3s ease;
 }
 .description p{
+    font-weight: 400;
     color: white;
-    padding-top: 5px ;
 }
 .description h4{
     text-transform: uppercase;
@@ -912,60 +946,74 @@ button {
     text-align: center;
     font-size: 70px;
 }
-#event-container {
+.event-overview {
+    padding: 20px;
+}
 
-	display: grid;
-	place-items: center
+.event-overview h2 {
+    font-size: 70px;
+    text-align: center;
+}
+
+.event-schedule, .event-intro, .useful-links {
+    margin-bottom: 50px;
+}
+#event-container {
+    display: grid;
+    place-items: center;
 }
 #slider-container {
-	height: 300px;
-	width: 85vw;
-	max-width: 1400px;
-	position: relative;
-	overflow: hidden;
-	padding: 20px;
+    height: 300px;
+    width: 100%;
+    max-width: 1400px;
+    position: relative;
+    overflow: hidden;
+    padding: 0 60px;
 }
 #slider-container .btn {
-	position: absolute;
-	top: calc(50% - 30px);
-	height: 15px;
-	width: 15px;
-	border-left: 8px solid #696969;
-	border-top: 8px solid #696969;
-	cursor: pointer;
+    position: absolute;
+    top: calc(50% - 30px);
+    height: 30px;
+    width: 30px;
+    border-left: 8px solid #696969;
+    border-top: 8px solid #696969;
+    cursor: pointer;
+    z-index: 10; /* Đảm bảo mũi tên nằm trên cùng */
 }
-
 #slider-container .btn:hover {
-	transform: scale(1.2);
+    transform: scale(1.2);
 }
 #slider-container .btn.inactive {
-	border-color: #282828
+    border-color: #282828;
 }
-#slider-container .btn:first-of-type {
-	transform: rotate(-45deg);
-	left: 10px
+#event-container .btn:first-of-type {
+    transform: rotate(-45deg);
+    left: 10px; /* Di chuyển nút trái vào bên trong */
 }
-#slider-container .btn:last-of-type {
-	transform: rotate(135deg);
-	right: 10px;
+#event-container .btn:last-of-type {
+    transform: rotate(135deg);
+    right: 10px; /* Di chuyển nút phải vào bên trong */
 }
 #slider-container #slider {
-	display: flex;
-	width: 1000%;
-	height: 100%;
-	transition: all .5s;
+    display: flex;
+    width: calc((100% + 30px) * 5 / 3);
+    height: 100%;
+    transition: margin-left 1s ease-in-out; /* Điều chỉnh transition để chuyển động mượt hơn */
+    gap: 30px;
 }
+
 #slider-container #slider .slide {
-	height: 90%;
-  width: 442px;
-	margin: auto 10px;
-	background-color: #E8F5FF;
-	border-radius: 5px;
-	box-shadow: 2px 2px 4px 2px white, -2px -2px 4px 2px white;
-	display: flex;
-  justify-content: center;
-	place-items: center;
+    height: 90%;
+    width: calc((100% - 120px) / 3); /* Điều chỉnh kích thước thẻ để phù hợp với khoảng cách */
+    margin: auto;
+    background-color: #E8F5FF;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    place-items: center;
 }
+
+
 .date-time{
   width: 130px;
   height: 130px;
@@ -1001,19 +1049,21 @@ button {
 	font-size: 60px;
 }
 @media only screen and (min-width: 1100px) {
-	#slider-container #slider .slide {
-		width: calc(3.4% - 20px);
-	}
+    #slider-container #slider .slide {
+        width: calc((100% - 90px) / 3); /* Điều chỉnh lại width để phù hợp với khoảng cách mới */
+    }
 }
+
 @media only screen and (max-width: 1100px) {
-	#slider-container #slider .slide {
-		width: calc(3.3333333% - 20px);
-	}
+    #slider-container #slider .slide {
+        width: calc(100% / 3 - 30px); /* Điều chỉnh lại width để phù hợp với khoảng cách mới */
+    }
 }
+
 @media only screen and (max-width: 900px) {
-	#slider-container #slider .slide {
-		width: calc(5% - 20px);
-	}
+    #slider-container #slider .slide {
+        width: calc(100% / 3 - 30px); /* Điều chỉnh lại width để phù hợp với khoảng cách mới */
+    }
 }
 /* /////////////////////////////////////////////// event schedule  /////////////////////////////////////////////// */ 
 .event-intro h2{
@@ -1056,19 +1106,25 @@ button {
   }
   .tags{
     display: flex;
-    /* align-items: center;
-    justify-content: center;
-    text-align: center; */
-  }
-  .tag1::before,
+    align-items: center;
+}
+.tag1::before,
 .tag2::before {
   content: "•";
   color: green; 
+  margin-bottom: 10px;
   font-size: 30px; 
   margin-right: 10px; 
-  vertical-align: middle; 
+  display: inline-block;
+  line-height: 0; /* Thay đổi line-height về 0 */
+  vertical-align: middle; /* Đảm bảo dấu chấm căn giữa */
 }
-
+.tag1,
+.tag2 {
+  display: flex;
+  align-items: center;
+  font-size: 18px; /* Đảm bảo văn bản cũng được căn chỉnh đúng */
+}
 .event-button{
     margin-top: 50px;
     width: 160px;

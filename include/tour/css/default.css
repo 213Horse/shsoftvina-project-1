@@ -17,7 +17,11 @@ body {
     color: #333;
     background-color: #f4f4f4;
 }
-
+@media (min-width: 1200px) {
+    .menu-toggle{
+        display: none; /* ��n icon 3 gạch */
+    }
+}
 /* Large devices (desktops, 1200px and up) */
 @media (max-width: 1200px) {
     body {
@@ -184,4 +188,30 @@ body {
         font-size: 12px;
         /* Adjust other styles as needed */
     }
+    .content-header h2{
+        font-size: 1rem !important;
+    }
+    .navbar {
+        width: 51% !important;
+    }
+
+}
+
+@media (max-width: 390px) {
+    body {
+        font-size: 11px;
+        /* Adjust other styles as needed */
+    }
+    .content-header h2{
+        font-size: 1rem !important;
+    }
+    .navbar {
+        width: 49% !important;
+    }
+    .header-top {
+        flex-direction: column;
+        justify-content: center !important; /* Có thể điều chỉnh theo nhu cầu của bạn */
+        align-items: center !important; /* Đảm bảo các phần tử được căn giữa */
+    }
+
 }
