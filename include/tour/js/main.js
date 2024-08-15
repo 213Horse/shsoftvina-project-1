@@ -126,9 +126,9 @@ if (menuToggle && navLinksContainer) { // Kiểm tra xem cả hai phần tử c�
     const cultureLink = document.getElementById("culture-link");
 
     // Đường dẫn đến các ảnh
-    const forestImageUrl = "include/tour/css/img/main/Rectangle5.png";
-    const waterImageUrl = "include/tour/css/img/main/Rectangle4.png";
-    const cultureImageUrl = "include/tour/css/img/main/Rectangle6.png";
+    const forestImageUrl = "include/tour/img/main/Rectangle5.png";
+    const waterImageUrl = "include/tour/img/main/Rectangle4.png";
+    const cultureImageUrl = "include/tour/img/main/Rectangle6.png";
 
     // Sự kiện click cho từng liên kết
     forestLink.addEventListener("click", function(event) {

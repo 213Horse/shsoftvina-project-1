@@ -158,30 +158,30 @@ buttons.forEach(button => {
 
 var tab1Images = [
   {
-    src: "include/tour/css/img/main/Rectangle9.jpg",
+    src: "include/tour/img/main/Rectangle9.jpg",
     overlayIndex: 0
   },
   {
-    src: "include/tour/css/img/main/Rectangle11.jpg",
+    src: "include/tour/img/main/Rectangle11.jpg",
     overlayIndex: 1
   },
   {
-    src: "include/tour/css/img/main/Rectangle12.jpg",
+    src: "include/tour/img/main/Rectangle12.jpg",
     overlayIndex: 2
   }
 ];
 
 var tab2Images = [
   {
-    src: "include/tour/css/img/main/Rectangle13.jpg",
+    src: "include/tour/img/main/Rectangle13.jpg",
     overlayIndex: 0
   },
   {
-    src: "include/tour/css/img/main/Rectangle14.jpg",
+    src: "include/tour/img/main/Rectangle14.jpg",
     overlayIndex: 1
   },
   {
-    src: "include/tour/css/img/main/Rectangle15.jpg",
+    src: "include/tour/img/main/Rectangle15.jpg",
     overlayIndex: 2
   }
 ];
