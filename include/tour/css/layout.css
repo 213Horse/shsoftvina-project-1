@@ -664,6 +664,17 @@ footer p {
     object-fit: cover;
     clip-path: inset(0 1.5% 0 0);
 }
+.image-collage1{
+    transform: scale(1.1);
+    margin-top: 275.5px;
+    position: absolute;
+    left: 11%;
+    width: 100%;
+    z-index: 1;
+}
+.image-collage1 img{
+    clip-path: inset(0 25.5% 0 0); 
+}
 
 .main-image {
     position: absolute;
@@ -1109,6 +1120,7 @@ button {
     width: 500px;
     border-radius: 100px 10px 10px 10px;
     overflow: hidden;
+    z-index: 2;
 }
 
 .image-collage img {
