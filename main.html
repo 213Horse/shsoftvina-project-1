@@ -11,6 +11,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Tourism Page</title>
   <link rel="stylesheet" href="./include/tour/css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./include/tour/css/default.css">
   <link rel="stylesheet" href="./include/tour/css/layout.css">
 </head>
@@ -61,14 +68,12 @@
           <h2>도심에서 느끼는 감성여행</h2>
           <p>아름다운 자연경관과 문화유산이 가득한 성남으로 오세요</p>
           <div class="menu-links" style="position: relative;">
-            <a href="#" id="forest-link" data-image-url="include/tour/img/main/Rectangle5.png">성남의
-              산림</a>
-            <a href="#" id="water-link" data-image-url="include/tour/img/main/Rectangle4.png">성남의 물길</a>
-            <a href="#" id="culture-link" data-image-url="include/tour/img/main/Rectangle6.png">성남의
-              문화길</a>
+            <a href="#" id="forest-link" data-images="include/tour/img/main/Rectangle5.png,include/tour/img/main/Rectangle4.png,include/tour/img/main/Rectangle6.png,include/tour/img/main/Rectangle7.png">성남의 산림</a>
+            <a href="#" id="water-link" data-images="include/tour/img/main/Rectangle4.png,include/tour/img/main/Rectangle5.png,include/tour/img/main/Rectangle7.png,include/tour/img/main/Rectangle6.png">성남의 물길</a>
+            <a href="#" id="culture-link" data-images="include/tour/img/main/Rectangle7.png,include/tour/img/main/Rectangle6.png,include/tour/img/main/Rectangle5.png,include/tour/img/main/Rectangle4.png">성남의 문화길</a>
             <div class="pagination-line"></div> <!-- Đường phân trang -->
-          </div>
-
+        </div>
+        
         </div>
 
       </div>
@@ -147,10 +152,15 @@
                 </div>
 
                 <div class="pagination">
-                  <button class="btn-page" onclick="prevImage()">◀</button>
+                  <button class="btn-page prev-image" onclick="prevImage()">◀</button>
+
                   <button id="play-button" class="btn-page play" onclick="playImage()">▶</button>
-                  <button id="stop-button" class="btn-page stop" onclick="stopPlay()" style="display:none;">⏸️</button>
-                  <button class="btn-page right" onclick="nextImage()">▶</button>
+                  <button id="stop-button" class="btn-page stop" onclick="stopPlay()" style="display:none;">
+                    <img src="include\tour\img\layout\pause.png" alt="Stop Icon" style="width: 20px; height: 20px;">
+                  </button>
+                  
+                  <button class="btn-page next-image" onclick="nextImage()">▶</button>
+
                 </div>
               </div>
 
@@ -303,77 +313,91 @@
       <!-- Section 1: Event Schedule -->
       <div class="event-schedule">
         <h2><strong>이달의 행사일정</strong></h2>
-        <div id="event-container">
-          <div id="slider-container">
-            <span onclick="slideRight()" class="btn"></span>
-            <div id="slider">
-              <div class="slide">
-                <div class="date-time">
-                  <h1><strong>4</h1></strong>
-                  <h2><strong>2024.05</strong></h2>
+        <div class="event-container">
+
+          <button class="owl-prev">
+            << /button>
+              <div class="owl-carousel">
+
+
+                <div class="item">
+                  <div class="slide">
+                    <div class="date-time">
+                      <h1><strong>4</h1></strong>
+                      <h2><strong>2024.05</strong></h2>
+                    </div>
+                    <div class="event-detail">
+                      <p class="event-paragraph"><strong>
+                          시립교향악단 성남뮤직페스티벌<br>
+                          시립교향악단 성남뮤직페스티벌
+                        </strong></p>
+                      <p class="event-time"><strong><i class="fa fa-clock-o"></i> 11:00 ~ 12:30</strong></p>
+                    </div>
+                  </div>
                 </div>
-                <div class="event-detail">
-                  <p class="event-paragraph"><strong>
-                    시립교향악단 성남뮤직페스티벌<br>
-                    시립교향악단 성남뮤직페스티벌
-                  </strong></p>
-                  <p class="event-time"><strong>11:00 ~ 12:30</strong></p>
+                <div class="item">
+                  <div class="slide">
+                    <div class="date-time">
+                      <h1><strong>10</strong></h1>
+                      <h2><strong>2024.05</strong></h2>
+                    </div>
+                    <div class="event-detail">
+                      <p class="event-paragraph"><strong>
+                          시립교향악단 성남뮤직페스티벌<br>
+                          시립교향악단 성남뮤직페스티벌
+                        </strong></p>
+                      <p class="event-time"><strong><i class="fa fa-clock-o"></i> 18:30 ~ 19:30</strong></p>
+                    </div>
+                  </div>
                 </div>
+                <div class="item">
+                  <div class="slide">
+                    <div class="date-time">
+                      <h1><strong>11</strong></h1>
+                      <h2><strong>2024.05</strong></h2>
+                    </div>
+                    <div class="event-detail">
+                      <p class="event-paragraph"><strong>
+                          제 14회 전국 사진 촬영 대회
+                        </strong></p>
+                      <p class="event-time"><strong><i class="fa fa-clock-o"></i> 09:30 ~ 18:00</strong></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="slide">
+                    <div class="date-time">
+                      <h1><strong>4</strong></h1>
+                      <h2><strong>2024.05</strong></h2>
+                    </div>
+                    <div class="event-detail">
+                      <p class="event-paragraph"><strong>
+                          시립교향악단 성남뮤직페스티벌<br>
+                          시립교향악단 성남뮤직페스티벌
+                        </strong></p>
+                      <p class="event-time"><strong><i class="fa fa-clock-o"></i> 11:00 ~ 12:30</strong></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="slide">
+                    <div class="date-time">
+                      <h1><strong>4</strong></h1>
+                      <h2><strong>2024.05</strong></h2>
+                    </div>
+                    <div class="event-detail">
+                      <p class="event-paragraph"><strong>
+                          시립교향악단 성남뮤직페스티벌<br>
+                          시립교향악단 성남뮤직페스티벌
+                        </strong></p>
+                      <p class="event-time"><strong><i class="fa fa-clock-o"></i> 11:00 ~ 12:30</strong></p>
+                    </div>
+                  </div>
+                </div>
+
               </div>
-              <div class="slide">
-                <div class="date-time">
-                  <h1><strong>10</strong></h1>
-                  <h2><strong>2024.05</strong></h2>
-                </div>
-                <div class="event-detail">
-                  <p class="event-paragraph"><strong>
-                    시립교향악단 성남뮤직페스티벌<br>
-                    시립교향악단 성남뮤직페스티벌
-                  </strong></p>
-                  <p class="event-time"><strong>18:30 ~ 19:30</strong></p>
-                </div>
-              </div>
-              <div class="slide">
-                <div class="date-time">
-                  <h1><strong>11</strong></h1>
-                  <h2><strong>2024.05</strong></h2>
-                </div>
-                <div class="event-detail">
-                  <p class="event-paragraph"><strong>
-                    제 14회 전국 사진 촬영 대회
-                  </strong></p>
-                  <p class="event-time"><strong>09:30 ~ 18:00</strong></p>
-                </div>
-              </div>
-              <div class="slide">
-                <div class="date-time">
-                  <h1><strong>4</strong></h1>
-                  <h2><strong>2024.05</strong></h2>
-                </div>
-                <div class="event-detail">
-                  <p class="event-paragraph"><strong>
-                    시립교향악단 성남뮤직페스티벌<br>
-                    시립교향악단 성남뮤직페스티벌
-                  </strong></p>
-                  <p class="event-time"><strong>11:00 ~ 12:30</strong></p>
-                </div>
-              </div>
-              <div class="slide">
-                <div class="date-time">
-                  <h1><strong>4</strong></h1>
-                  <h2><strong>2024.05</strong></h2>
-                </div>
-                <div class="event-detail">
-                  <p class="event-paragraph"><strong>
-                    시립교향악단 성남뮤직페스티벌<br>
-                    시립교향악단 성남뮤직페스티벌
-                  </strong></p>
-                  <p class="event-time"><strong>11:00 ~ 12:30</strong></p>
-                </div>
-              </div>
-            </div>
-            <span onclick="slideLeft()" class="btn right"></span>
-          </div>
+
+              <button class="owl-next">></button>
         </div>
       </div>
 

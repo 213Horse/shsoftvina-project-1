@@ -194,15 +194,9 @@ function changeMainImage(imageSrc, overlayIndex) {
   var mainImage = document.getElementById("main-display");
   mainImage.classList.add('fade-out');
 
-  document.querySelectorAll('.image-container').forEach(container => {
-    container.classList.remove('active-hover');
-  });
-
   setTimeout(function () {
     mainImage.src = imageSrc;
     mainImage.classList.remove('fade-out');
-
-    document.querySelectorAll('.images')[currentTab - 1].querySelectorAll('.image-container')[overlayIndex].classList.add('active-hover');
   }, 1500);
 }
 
@@ -217,6 +211,46 @@ function nextImage() {
   var images = getImages();
   changeMainImage(images[currentIndex].src, images[currentIndex].overlayIndex);
 }
+
+function getImages() {
+  return currentTab === 1 ? tab1Images : tab2Images;
+}
+
+function showTab(tabNumber) {
+  currentTab = tabNumber;
+  currentIndex = 0;
+
+  document.getElementById('tab1').style.display = (tabNumber === 1) ? 'flex' : 'none';
+  document.getElementById('tab2').style.display = (tabNumber === 2) ? 'flex' : 'none';
+
+  var images = getImages();
+  changeMainImage(images[0].src, images[0].overlayIndex);
+}
+
+// Khi trang tải xong, hiển thị ảnh đầu tiên của tab 1
+document.addEventListener("DOMContentLoaded", function () {
+  showTab(1);
+});
+
+function playImage() {
+  if (!playInterval) {
+    playInterval = setInterval(function () {
+      nextImage();
+    }, 5000);
+    document.getElementById("play-button").style.display = "none";
+    document.getElementById("stop-button").style.display = "inline-block";
+  }
+}
+
+function stopPlay() {
+  clearInterval(playInterval);
+  playInterval = null;
+  document.getElementById("play-button").style.display = "inline-block";
+  document.getElementById("stop-button").style.display = "none";
+}
+
+
+
 
 
 // Khi trang tải xong, tự động áp dụng hover cho ảnh nhỏ tương ứng với ảnh chính
@@ -254,22 +288,7 @@ document.addEventListener("DOMContentLoaded", function () {
   showTab(1);
 });
 
-function playImage() {
-  if (!playInterval) {
-    playInterval = setInterval(function () {
-      nextImage();
-    }, 5000);
-    document.getElementById("play-button").style.display = "none";
-    document.getElementById("stop-button").style.display = "inline-block";
-  }
-}
 
-function stopPlay() {
-  clearInterval(playInterval);
-  playInterval = null;
-  document.getElementById("play-button").style.display = "inline-block";
-  document.getElementById("stop-button").style.display = "none";
-}
 
 
 function leftClick() {
