@@ -1023,7 +1023,7 @@ button {
 }
 
 #slider-container #slider .slide {
-    height: 90%;
+    height: 72%;
     width: calc((100% - 120px) / 3);
     margin: auto;
     background-color: #E8F5FF;
@@ -1053,7 +1053,6 @@ button {
 
 .event-detail {
     margin-left: 20px;
-    height: 130px;
 }
 
 .event-paragraph {
