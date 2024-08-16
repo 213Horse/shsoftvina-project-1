@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const switchInterval = 3000; // 3 giây
     let autoSwitchInterval; // Biến để lưu trữ interval tự động
     let userInteractionTimeout; // Biến để lưu trữ timeout sau khi người dùng tương tác
-
+    
     // Thiết lập ảnh nền ban đầu dựa trên thời gian trong ngày
     if (currentHour < 12) {
         headerElement.style.backgroundImage = "url('morning_image.jpg')";

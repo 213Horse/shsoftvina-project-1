@@ -1,102 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
-  var container = document.getElementById('event-container');
-  var slider = document.getElementById('slider');
-  var slides = document.getElementsByClassName('slide');
-  var buttons = document.getElementsByClassName('btn');
 
-  var slideWidth = 473; // Chiều rộng của mỗi thẻ
-  var slidesPerPage = 3; // Số thẻ hiển thị mỗi lần
-  var slidesCount = slides.length;
-  var currentPosition = 0;
-  var currentMargin = 0;
-  var containerWidth;
-  var autoSlideInterval;
-  var autoSlideTimeout;
-
-  function checkWidth() {
-    containerWidth = container.offsetWidth;
-    setParams(containerWidth);
-  }
-
-  function setParams(w) {
-    slidesPerPage = Math.floor(w / slideWidth);
-    slidesCount = Math.max(0, slides.length - slidesPerPage);
-    if (currentPosition > slidesCount) {
-      currentPosition = slidesCount;
-    }
-    currentMargin = -currentPosition * slideWidth;
-    slider.style.marginLeft = currentMargin + 'px';
-    updateButtons();
-  }
-
-  function updateButtons() {
-    if (currentPosition === 0) {
-      buttons[0].classList.add('inactive');
-    } else {
-      buttons[0].classList.remove('inactive');
-    }
-    if (currentPosition >= slidesCount) {
-      buttons[1].classList.add('inactive');
-    } else {
-      buttons[1].classList.remove('inactive');
-    }
-  }
-
-  function slideRight() {
-    if (currentPosition < slidesCount) {
-      currentPosition += slidesPerPage; // Di chuyển 3 thẻ một lần
-      if (currentPosition > slidesCount) {
-        currentPosition = slidesCount;
-      }
-      currentMargin = -currentPosition * slideWidth;
-    } else {
-      currentPosition = 0; // Quay lại từ đầu
-      currentMargin = 0;
-    }
-    slider.style.marginLeft = currentMargin + 'px';
-    updateButtons();
-  }
-
-  function slideLeft() {
-    if (currentPosition > 0) {
-      currentPosition -= slidesPerPage; // Di chuyển 3 thẻ một lần
-      if (currentPosition < 0) {
-        currentPosition = 0;
-      }
-      currentMargin = -currentPosition * slideWidth;
-      slider.style.marginLeft = currentMargin + 'px';
-      updateButtons();
-    }
-  }
-
-  function autoSlide() {
-    slideRight();
-  }
-
-  function resetAutoSlide() {
-    clearInterval(autoSlideInterval); // Dừng tự động chuyển slide
-    clearTimeout(autoSlideTimeout);   // Xóa hẹn giờ để tránh việc nhiều hẹn giờ cùng lúc
-
-    autoSlideTimeout = setTimeout(function() {
-      autoSlideInterval = setInterval(autoSlide, 3000); // Khôi phục tự động chuyển slide sau 3 giây
-    }, 3000);
-  }
-
-  buttons[0].addEventListener('click', function() {
-    slideLeft();
-    resetAutoSlide();
-  });
-
-  buttons[1].addEventListener('click', function() {
-    slideRight();
-    resetAutoSlide();
-  });
-
-  window.addEventListener("resize", checkWidth);
-  checkWidth();
-
-  autoSlideInterval = setInterval(autoSlide, 3000); // Tự động chuyển slide sau mỗi 3 giây
-});
 
 
 const navigationButtons = document.querySelectorAll('.navigation button');
@@ -197,8 +99,10 @@ function changeMainImage(imageSrc, overlayIndex) {
   setTimeout(function () {
     mainImage.src = imageSrc;
     mainImage.classList.remove('fade-out');
-  }, 1500);
+  }, 1000);
 }
+
+
 
 function prevImage() {
   currentIndex = (currentIndex > 0) ? currentIndex - 1 : getImages().length - 1;
@@ -211,6 +115,7 @@ function nextImage() {
   var images = getImages();
   changeMainImage(images[currentIndex].src, images[currentIndex].overlayIndex);
 }
+  
 
 function getImages() {
   return currentTab === 1 ? tab1Images : tab2Images;
@@ -234,11 +139,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function playImage() {
   if (!playInterval) {
-    playInterval = setInterval(function () {
-      nextImage();
-    }, 5000);
-    document.getElementById("play-button").style.display = "none";
-    document.getElementById("stop-button").style.display = "inline-block";
+      playInterval = setInterval(function () {
+          nextImage();
+      }, 5000);
+      document.getElementById("play-button").style.display = "none";
+      document.getElementById("stop-button").style.display = "inline-block";
   }
 }
 

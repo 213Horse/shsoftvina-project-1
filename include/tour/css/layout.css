@@ -1,14 +1,35 @@
 .header {
     position: relative;
+    background-image: url('/include/tour/img/main/Rectangle8.jpg') !important;
     background-size: cover;
     background-position: center;
     color: white;
     height: 90vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     transition: background-image 0.3s ease-in-out;
+    overflow: hidden; /* Đảm bảo lớp phủ không vượt ra ngoài phần tử cha */
 }
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(37, 37, 37, 0.5); /* Màu đen với độ mờ 50% */
+    z-index: 1; /* Đảm bảo lớp phủ nằm trên ảnh nền nhưng dưới nội dung */
+}
+
+.header * {
+    position: relative;
+    z-index: 2; /* Đảm bảo nội dung nằm trên lớp phủ mờ */
+}
+
+
 
 .navbar {
     position: fixed;
@@ -247,7 +268,7 @@
     color: white;
     opacity: 0;
     transition: opacity 0.3s ease;
-    z-index: 2;
+    z-index: 3; /* Đặt giá trị z-index cao hơn */
     width: 40px;
     height: 40px;
     display: flex;
@@ -260,6 +281,7 @@
 .image-item:hover .plus-sign {
     opacity: 1;
 }
+
 
 .nav-links li {
     position: relative;
@@ -353,7 +375,7 @@ footer p {
 .circle-image {
     position: absolute;
     bottom: -30px;
-    right: -30px;
+    right: -54px;
     width: 100px;
     height: 100px;
     z-index: 3;
@@ -366,6 +388,7 @@ footer p {
     border-radius: 50%;
     object-fit: cover;
 }
+
 
 .circle-image1 {
     position: absolute;
@@ -697,10 +720,15 @@ footer p {
 
 .main-image img {
     width: 110%;
-    border-radius: 155px;
-    transition: opacity 1.5s ease-in-out;
+    /* border-radius: 155px; */
     opacity: 1;
 }
+#main-display:hover img[src="include/tour/img/main/Rectangle12.jpg"] {
+    border-radius: 15px; /* Thay đổi giá trị này tùy ý bạn */
+    transition: border-radius 0.3s ease-in-out;
+}
+
+
 
 .image-container.active-hover .image-overlay {
     opacity: 1;
@@ -744,26 +772,25 @@ footer p {
     border-top-left-radius: 15px;
     border-bottom-right-radius: 15px;
 }
-/* Định dạng nút ban đầu là hình vuông */
+
 .btn-page.play, .btn-page.stop {
     width: 40px;
     height: 40px;
-    border-radius: 0; /* Hình vuông ban đầu */
+    border-radius: 0; 
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     transition: box-shadow 0.3s ease, border-color 0.3s ease, border-radius 0.3s ease, background-color 0.3s ease;
-    border: 2px solid transparent; /* Viền trong suốt ban đầu */
-    background-color: initial; /* Nền mặc định */
+    border: 2px solid transparent;
+    background-color: initial;
 }
 
-/* Hiệu ứng khi hover */
+
 .btn-page.play:hover, .btn-page.stop:hover {
-    border-radius: 50%; /* Chuyển thành hình tròn khi hover */
-    box-shadow: 0 0 15px 5px #067F77; /* Viền ánh sáng xanh */
-    border-color: #067F77; /* Đổi màu viền thành xanh dương khi hover */
-    background-color: white; /* Nền trắng khi hover */
+    border-radius: 50%;
+    box-shadow: 0 0 15px 5px #067F77; 
+    border-color: #067F77;
 }
 
 .btn-page.stop img {
@@ -912,6 +939,7 @@ button {
 .card > .row {
     color: white;
     margin: 10px;
+    z-index: 1;
 }
 
 .card >.row >.icon {
@@ -975,7 +1003,7 @@ button {
 }
 
 .theme-slider-container label[for="c1"] {
-    background-color: #ffbbac;
+    background-color: #e215158a;
     background-blend-mode: multiply;
     background-size: cover;
     background-position: center;
@@ -1080,9 +1108,9 @@ button {
     gap: 30px;
 }
 
-#slider-container #slider .slide {
-    height: 72%;
-    width: calc((100% - 120px) / 3);
+.slide {
+    height: 180px;
+    width: 440px;
     margin: auto;
     background-color: #E8F5FF;
     border-radius: 20px;
@@ -1090,19 +1118,29 @@ button {
     justify-content: center;
     place-items: center;
 }
+.item .slide {
+    
+    background-color: #E8F5FF;
+    transition: background-color 0.3s ease;
+  }
+.item .slide:hover {
+    border: 2px solid #005BAC;
+    background-color: white;
+  }
 
 .date-time {
-    width: 130px;
-    height: 130px;
+    width: 100px;
+    height: 100px;
     padding: 10px;
     border-radius: 20px;
     background: white;
     text-align: center;
 }
 
+
 .date-time h1 {
-    line-height: 1.3;
-    font-size: 50px;
+    line-height: 0.8;
+    font-size: 45px;
 }
 
 .date-time h2 {
@@ -1121,6 +1159,7 @@ button {
 }
 
 .event-time {
+    display: flex;
     margin-top: 1%;
 }
 
@@ -1180,6 +1219,7 @@ button {
     margin: 50px;
     font-size: 16px;
     color: #333;
+    z-index: 2;
 }
 
 .tags {
@@ -1231,15 +1271,52 @@ button {
 }
 
 .links {
+    display: flex;
+    justify-content: space-between;
     border: 1px solid lightgray;
     border-radius: 10px;
     padding: 40px;
+    gap: 1px; /* Sát nhau hoàn toàn */
 }
 
 .links-icon {
     text-align: center;
+    flex: 1;
 }
+
 
 html {
     scroll-behavior: smooth;
+}
+.owl-prev,
+.owl-next {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+ .owl-prev{
+    color: lightgray;
+    font-size: 52px;
+    margin-bottom: 30px;
+    left: 5%;
+}
+.owl-next{
+
+    color: lightgray;
+    font-size: 60px;
+    margin-bottom: 30px;
+    right: 5%;
+}
+
+.event-container{
+    margin: 0 auto;
+    text-align: center;
+    justify-content: space-around;
+    position: relative;
+} 
+.owl-carousel{
+    width: 80%;
+    margin: 0 auto;
+
 }

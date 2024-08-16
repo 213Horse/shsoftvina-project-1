@@ -79,10 +79,10 @@
       </div>
 
       <div class="image-gallery" style="position: relative;">
-        <div class="image-item" style="position: relative;">
+        <div class="image-item">
           <img src="include/tour/img/main/Rectangle5.png" alt="Ảnh 1">
-          <div class="plus-sign">+</div>
-        </div>
+          <div class="plus-sign">+</div> <!-- Đảm bảo class này nằm bên trong image-item -->
+      </div>
         <div class="image-item" style="position: relative;">
           <img src="include/tour/img/main/Rectangle4.png" alt="Ảnh 2">
           <div class="plus-sign">+</div>
@@ -140,8 +140,9 @@
             <div class="seong-nam-background">
               <h1>Seong-Nam</h1>
             </div>
-            <h2>아름다운 경관과 문화가</h2>
-            <h2>어우러진 성남</h2>
+            <h2 class="viewcontent1" style="display:block">아름다운 경관과 문화가</h2>
+            <h2 class="viewcontent1" style="display:block">어우러진 성남</h2>
+            <h2 class="viewcontent" style="display:none">아름다운 경관과 문화가 어우러진 성남</h2>
             <p>다양한 성남의 아름다운 모습을 만나보세요!</p>
             <div class="gallery">
               <div class="buttons-page">
@@ -178,7 +179,9 @@
                     </div>
                 </div>
                 <div class="image-container">
-                    <img src="include/tour/img/main/Rectangle11.jpg" alt="Image 2">
+                 
+                    <img src="include/tour/img/main/Rectangle12.jpg" alt="Ảnh cụ thể">
+                  
                     <div class="image-overlay">
                         <h3>2경 성남시장</h3>
                         <div class="circle-image1">
@@ -314,90 +317,78 @@
       <div class="event-schedule">
         <h2><strong>이달의 행사일정</strong></h2>
         <div class="event-container">
-
-          <button class="owl-prev">
-            << /button>
-              <div class="owl-carousel">
-
-
-                <div class="item">
-                  <div class="slide">
-                    <div class="date-time">
-                      <h1><strong>4</h1></strong>
-                      <h2><strong>2024.05</strong></h2>
-                    </div>
-                    <div class="event-detail">
-                      <p class="event-paragraph"><strong>
-                          시립교향악단 성남뮤직페스티벌<br>
-                          시립교향악단 성남뮤직페스티벌
-                        </strong></p>
-                      <p class="event-time"><strong><i class="fa fa-clock-o"></i> 11:00 ~ 12:30</strong></p>
-                    </div>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="slide">
-                    <div class="date-time">
-                      <h1><strong>10</strong></h1>
-                      <h2><strong>2024.05</strong></h2>
-                    </div>
-                    <div class="event-detail">
-                      <p class="event-paragraph"><strong>
-                          시립교향악단 성남뮤직페스티벌<br>
-                          시립교향악단 성남뮤직페스티벌
-                        </strong></p>
-                      <p class="event-time"><strong><i class="fa fa-clock-o"></i> 18:30 ~ 19:30</strong></p>
-                    </div>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="slide">
-                    <div class="date-time">
-                      <h1><strong>11</strong></h1>
-                      <h2><strong>2024.05</strong></h2>
-                    </div>
-                    <div class="event-detail">
-                      <p class="event-paragraph"><strong>
-                          제 14회 전국 사진 촬영 대회
-                        </strong></p>
-                      <p class="event-time"><strong><i class="fa fa-clock-o"></i> 09:30 ~ 18:00</strong></p>
-                    </div>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="slide">
-                    <div class="date-time">
-                      <h1><strong>4</strong></h1>
-                      <h2><strong>2024.05</strong></h2>
-                    </div>
-                    <div class="event-detail">
-                      <p class="event-paragraph"><strong>
-                          시립교향악단 성남뮤직페스티벌<br>
-                          시립교향악단 성남뮤직페스티벌
-                        </strong></p>
-                      <p class="event-time"><strong><i class="fa fa-clock-o"></i> 11:00 ~ 12:30</strong></p>
-                    </div>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="slide">
-                    <div class="date-time">
-                      <h1><strong>4</strong></h1>
-                      <h2><strong>2024.05</strong></h2>
-                    </div>
-                    <div class="event-detail">
-                      <p class="event-paragraph"><strong>
-                          시립교향악단 성남뮤직페스티벌<br>
-                          시립교향악단 성남뮤직페스티벌
-                        </strong></p>
-                      <p class="event-time"><strong><i class="fa fa-clock-o"></i> 11:00 ~ 12:30</strong></p>
-                    </div>
-                  </div>
-                </div>
-
+         
+          <button class="owl-prev"><</button>
+           <div class="owl-carousel">
+            <div class="item"><div class="slide">
+              <div class="date-time">
+                <h1><strong>4</h1></strong>
+                <h2><strong>2024.05</strong></h2>
               </div>
+              <div class="event-detail">
+                <p class="event-paragraph"><strong>
+                  시립교향악단 성남뮤직페스티벌<br>
+                  시립교향악단 성남뮤직페스티벌
+                </strong></p>
+                <p class="event-time"><strong><i class="fa fa-clock-o"></i> 11:00 ~ 12:30</strong></p>
+              </div>
+              </div>
+          </div>
+    <div class="item"><div class="slide">
+      <div class="date-time">
+        <h1><strong>10</strong></h1>
+        <h2><strong>2024.05</strong></h2>
+      </div>
+      <div class="event-detail">
+        <p class="event-paragraph"><strong>
+          시립교향악단 성남뮤직페스티벌<br>
+          시립교향악단 성남뮤직페스티벌
+        </strong></p>
+        <p class="event-time"><strong><i class="fa fa-clock-o"></i> 18:30 ~ 19:30</strong></p>
+      </div>
+    </div></div>
+    <div class="item"> <div class="slide">
+      <div class="date-time">
+        <h1><strong>11</strong></h1>
+        <h2><strong>2024.05</strong></h2>
+      </div>
+      <div class="event-detail">
+        <p class="event-paragraph"><strong>
+          제 14회 전국 사진 촬영 대회
+        </strong></p>
+        <p class="event-time"><strong><i class="fa fa-clock-o"></i> 09:30 ~ 18:00</strong></p>
+      </div>
+    </div></div>
+    <div class="item"> <div class="slide">
+      <div class="date-time">
+        <h1><strong>4</strong></h1>
+        <h2><strong>2024.05</strong></h2>
+      </div>
+      <div class="event-detail">
+        <p class="event-paragraph"><strong>
+          시립교향악단 성남뮤직페스티벌<br>
+          시립교향악단 성남뮤직페스티벌
+        </strong></p>
+        <p class="event-time"><strong><i class="fa fa-clock-o"></i> 11:00 ~ 12:30</strong></p>
+      </div>
+    </div></div>
+    <div class="item"><div class="slide">
+      <div class="date-time">
+        <h1><strong>4</strong></h1>
+        <h2><strong>2024.05</strong></h2>
+      </div>
+      <div class="event-detail">
+        <p class="event-paragraph"><strong>
+          시립교향악단 성남뮤직페스티벌<br>
+          시립교향악단 성남뮤직페스티벌
+        </strong></p>
+        <p class="event-time"><strong><i class="fa fa-clock-o"></i> 11:00 ~ 12:30</strong></p>
+      </div>
+    </div></div>
+   
+            </div>
 
-              <button class="owl-next">></button>
+            <button class="owl-next">></button>
         </div>
       </div>
 
@@ -512,6 +503,71 @@
 
   </footer>
   <!-- Script -->
+  <script
+  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+  integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+<!-- Import script owl carousel  -->
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+  integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+<script type="text/javascript" >
+  $(document).ready(function(){
+    var owl = $('.owl-carousel').owlCarousel({
+        margin:0,
+        nav:false,
+        mouseDrag:false,
+        touchDrag:false,
+        pullDrag:false,
+        loop:false, // Tắt chế độ vòng lặp
+        responsive:{
+            0:{
+                items:3 // Hiển thị 3 item trên mỗi trang
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:3
+            },
+            1400:{
+              items:3
+          },
+        }
+    });
+
+    function autoSlide() {
+        var totalItems = $('.owl-item').length; // Tổng số item
+        var itemsPerPage = 3; // Số item mỗi trang
+        var currentIndex = owl.find('.active').index(); // Vị trí hiện tại của trang
+        var totalPages = Math.ceil(totalItems / itemsPerPage); // Tổng số trang
+        var currentPage = Math.floor(currentIndex / itemsPerPage) + 1; // Trang hiện tại
+
+        if (currentPage < totalPages) {
+            owl.trigger('next.owl.carousel'); // Chuyển tới trang tiếp theo
+        } else {
+            owl.trigger('to.owl.carousel', [0, 300]); // Quay lại trang đầu tiên
+        }
+    }
+
+    setInterval(autoSlide, 2000); // Chuyển trang mỗi 2 giây
+
+    $('.owl-next').click(function() {
+        owl.trigger('next.owl.carousel');
+    });
+
+    $('.owl-prev').click(function() {
+        owl.trigger('prev.owl.carousel');
+    });
+});
+
+
+</script>
   <script type="text/javascript" src="include/tour/js/main.js"></script>
   <script src="include/tour/js/layout.js"></script>
 </body>
