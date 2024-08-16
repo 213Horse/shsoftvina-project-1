@@ -781,9 +781,9 @@ footer p {
 .btn-page.play, .btn-page.stop {
     width: 40px;
     height: 40px;
-    border-radius: 0; 
     display: flex;
     justify-content: center;
+    background-color: white !important ;
     align-items: center;
     cursor: pointer;
     transition: box-shadow 0.3s ease, border-color 0.3s ease, border-radius 0.3s ease, background-color 0.3s ease;
@@ -906,7 +906,7 @@ button {
 }
 
 .btn-page:hover {
-    background-color: #067F77;
+    background-color: #067F77 !important;
     color: white;
 }
 
@@ -1198,6 +1198,13 @@ button {
     }
 }
 /* next */
+.pagination.pagination-slider-bottom {
+    position: absolute;
+    bottom: 7px; /* Điều chỉnh khoảng cách từ dưới lên */
+    left: 33%;
+    transform: translateX(-50%);
+    z-index: 3; /* Đảm bảo nó nằm trên các phần tử khác */
+}
 .event-intro h2 {
     font-size: 70px;
     text-align: center;
@@ -1210,15 +1217,17 @@ button {
 .intro-content {
     display: flex;
     height: 500px;
+    position: relative;
     align-items: center;
     justify-content: center;
 }
 
 .image-collage {
+    position: relative;
     width: 500px;
     border-radius: 100px 10px 10px 10px;
     overflow: hidden;
-    z-index: 2;
+    z-index: 1;
 }
 
 .image-collage img {
