@@ -151,7 +151,17 @@
                   <button onclick="showTab(1)" type="button" class="toggle-btn active">성남 9경</button>
                   <button onclick="showTab(2)" type="button" class="toggle-btn">벚꽃 9경</button>
                 </div>
+                <div class="pagination">
+                  <button class="btn-page prev-image" onclick="prevImage()">◀</button>
 
+                  <button id="play-button" class="btn-page play" onclick="playImage()">▶</button>
+                  <button id="stop-button" class="btn-page stop" onclick="stopPlay()" style="display:none;">
+                    <img src="include\tour\img\layout\pause.png" alt="Stop Icon" style="width: 20px; height: 20px;">
+                  </button>
+
+                  <button class="btn-page next-image" onclick="nextImage()">▶</button>
+
+                </div>
                 
               </div>
 
@@ -419,14 +429,14 @@
                 <button class="event-button">바로가기</button>
             </div>
             <div class="pagination pagination-slider-bottom">
-              <button class="btn-page prev-image" onclick="prevImage()">◀</button>
+              <button class="btn-page prev-image" onclick="prevImage1()">◀</button>
 
-              <button id="play-button" class="btn-page play" onclick="playImage()">▶</button>
-              <button id="stop-button" class="btn-page stop" onclick="stopPlay()" style="display:none;">
+              <button id="play-button" class="btn-page play" onclick="playImage1()">▶</button>
+              <button id="stop-button" class="btn-page stop" onclick="stopPlay1()" style="display:none;">
                 <img src="include\tour\img\layout\pause.png" alt="Stop Icon" style="width: 20px; height: 20px;">
               </button>
               
-              <button class="btn-page next-image" onclick="nextImage()">▶</button>
+              <button class="btn-page next-image" onclick="nextImage1()">▶</button>
 
             </div>
         </div>
@@ -551,6 +561,8 @@
         }
     });
 
+    var direction = 'right'; // Hướng ban đầu là 'right' (phải qua trái)
+
     function autoSlide() {
         var totalItems = $('.owl-item').length; // Tổng số item
         var itemsPerPage = 3; // Số item mỗi trang
@@ -558,14 +570,22 @@
         var totalPages = Math.ceil(totalItems / itemsPerPage); // Tổng số trang
         var currentPage = Math.floor(currentIndex / itemsPerPage) + 1; // Trang hiện tại
 
-        if (currentPage < totalPages) {
-            owl.trigger('next.owl.carousel'); // Chuyển tới trang tiếp theo
+        if (direction === 'right') {
+            if (currentPage < totalPages) {
+                owl.trigger('next.owl.carousel'); // Chuyển tới trang tiếp theo
+            } else {
+                direction = 'left'; // Đổi hướng sang 'left' khi đến trang cuối
+            }
         } else {
-            owl.trigger('to.owl.carousel', [0, 300]); // Quay lại trang đầu tiên
+            if (currentPage > 1) {
+                owl.trigger('prev.owl.carousel'); // Chuyển ngược lại trang trước đó
+            } else {
+                direction = 'right'; // Đổi hướng sang 'right' khi đến trang đầu tiên
+            }
         }
     }
 
-    setInterval(autoSlide, 2000); // Chuyển trang mỗi 2 giây
+    setInterval(autoSlide, 3000); // Chuyển trang mỗi 2 giây
 
     $('.owl-next').click(function() {
         owl.trigger('next.owl.carousel');
@@ -576,6 +596,8 @@
     });
 });
 </script>
+
+
   <script type="text/javascript" src="include/tour/js/main.js"></script>
   <script src="include/tour/js/layout.js"></script>
 </body>
