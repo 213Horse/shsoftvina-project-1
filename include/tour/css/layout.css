@@ -344,6 +344,8 @@ footer {
     display: flex;
     justify-content: space-between;
     padding: 50px;
+    border-top: 2px solid #CCCCCC !important; /* Điều chỉnh độ dày và màu sắc theo nhu cầu */
+    padding-top: 41px; /* Thêm khoảng cách giữa đường viền và nội dung */
     background-color: white;
     margin-top: 20px;
 }
@@ -364,6 +366,21 @@ footer {
     border-right: 1px solid black;
     padding-left: 10px;
     padding-right: 10px;
+    text-decoration: none; 
+}
+.footer-link,
+.footer-border,
+a {
+    color: rgb(0, 0, 0); /* Màu chữ khi hover */
+    text-decoration: none; /* Loại bỏ gạch chân */
+    font-weight: 400;
+}
+
+.footer-link:hover,
+.footer-border:hover,
+a:hover {
+    color: blue; /* Màu chữ khi hover */
+    text-decoration: none; /* Loại bỏ gạch chân */
 }
 
 footer p {
