@@ -678,7 +678,7 @@ footer p {
 }
 .gallery .images img {
     height: 24.5vh;
-    border-radius: 30px;
+    border-radius: 10px;
     object-fit: cover;
     pointer-events: none;
 }
@@ -723,9 +723,12 @@ footer p {
     /* border-radius: 155px; */
     opacity: 1;
 }
-#main-display:hover img[src="include/tour/img/main/Rectangle12.jpg"] {
-    border-radius: 15px; /* Thay đổi giá trị này tùy ý bạn */
+#main-display {
     transition: border-radius 0.3s ease-in-out;
+}
+
+#main-display:hover {
+    border-radius: 150px; /* Giá trị này có thể thay đổi tùy ý bạn */
 }
 
 
@@ -958,8 +961,8 @@ button {
     color: white;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
-    height: 80px;
+
+    height: 76px;
     width: 520px;
     opacity: 1;
     transform: translateY(30px);
@@ -978,6 +981,13 @@ button {
 
 .theme-slider-container input {
     display: none;
+}
+
+.slider-arrow {
+    margin-left: -16%;
+    margin-top: 40%;
+    transform: rotate(45deg);
+    z-index: 2;
 }
 
 .theme-slider-container input:checked + label {

@@ -152,17 +152,7 @@
                   <button onclick="showTab(2)" type="button" class="toggle-btn">벚꽃 9경</button>
                 </div>
 
-                <div class="pagination">
-                  <button class="btn-page prev-image" onclick="prevImage()">◀</button>
-
-                  <button id="play-button" class="btn-page play" onclick="playImage()">▶</button>
-                  <button id="stop-button" class="btn-page stop" onclick="stopPlay()" style="display:none;">
-                    <img src="include\tour\img\layout\pause.png" alt="Stop Icon" style="width: 20px; height: 20px;">
-                  </button>
-                  
-                  <button class="btn-page next-image" onclick="nextImage()">▶</button>
-
-                </div>
+                
               </div>
 
               <div class="images" id="tab1">
@@ -285,6 +275,9 @@
               <div class="description">
                 <p><strong>이야기가 있는 판교 워킹투어</strong></p>
                 <p style="font-size: 1rem !important;">간단한 투어 소개가 들어갑니다. </p>
+                <div class="slider-arrow">
+                  <i class="fas fa-arrow-circle-up" style="font-size:36px"></i>
+                </div>
               </div>
             </div>
           </label>
@@ -295,6 +288,9 @@
               <div class="description">
                 <p><strong>이야기가 있는 판교 워킹투어</strong></p>
                 <p style="font-size: 1rem !important;">간단한 투어 소개가 들어갑니다.  </p>
+                <div class="slider-arrow">
+                  <i class="fas fa-arrow-circle-up" style="font-size:36px"></i>
+                </div>
               </div>
             </div>
           </label>
@@ -305,6 +301,9 @@
               <div class="description">
                 <p><strong>이야기가 있는 판교 워킹투어</strong></p>
                 <p style="font-size: 1rem !important;">간단한 투어 소개가 들어갑니다. </p>
+                <div class="slider-arrow">
+                  <i class="fas fa-arrow-circle-up" style="font-size:36px"></i>
+                </div>
               </div>
             </div>
           </label>
@@ -418,6 +417,17 @@
                     <div class="tag2">주관 한국예총 성남지회</div>
                 </div>
                 <button class="event-button">바로가기</button>
+            </div>
+            <div class="pagination pagination-slider-bottom">
+              <button class="btn-page prev-image" onclick="prevImage()">◀</button>
+
+              <button id="play-button" class="btn-page play" onclick="playImage()">▶</button>
+              <button id="stop-button" class="btn-page stop" onclick="stopPlay()" style="display:none;">
+                <img src="include\tour\img\layout\pause.png" alt="Stop Icon" style="width: 20px; height: 20px;">
+              </button>
+              
+              <button class="btn-page next-image" onclick="nextImage()">▶</button>
+
             </div>
         </div>
     </div>
@@ -565,8 +575,6 @@
         owl.trigger('prev.owl.carousel');
     });
 });
-
-
 </script>
   <script type="text/javascript" src="include/tour/js/main.js"></script>
   <script src="include/tour/js/layout.js"></script>

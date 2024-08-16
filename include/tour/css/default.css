@@ -15,7 +15,6 @@ body {
     font-family: 'Pretendard', sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f4f4f4;
 }
 @media (min-width: 1200px) {
     .menu-toggle{
@@ -224,8 +223,21 @@ body {
         border-bottom: 0px solid white;
         transition: border-bottom 0.3s ease;
     }
+    .first-section {
+        padding: 20px  !important; /* Giảm padding trên và dưới */
+        max-height: 600px !important; /* Giới hạn chiều cao của section */
+
+      }
+      
+      .first-container {
+        padding: 10px !important; /* Giảm padding bên trong container */
+      }
+      
     .image-gallery {
         gap: 74px !important;
+    }
+    .circle-image{
+        display: none !important;
     }
     .pagination-line {
         display: flex;
@@ -253,11 +265,12 @@ body {
         display: none !important;
     }
     .main-image1{
-        margin-top:300px !important;
+        margin-top:-622px !important;
         left: -365px !important;
     }
     .main-image1 img{
         width: 263% !important;
+        clip-path: inset(0 13.5% 12.5% 0) !important;
     }
     .first-section{
         box-shadow: none !important;
@@ -284,7 +297,7 @@ body {
     .viewcontent1{
         display: none !important;
     }
-    .gallery .images{
+    #main-display{
         display: none !important;
     }
 
@@ -330,10 +343,7 @@ body {
 }
 
     .gallery .images {
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
-        width: 100%;
+        margin-left: 598px !important;
     }
 
     .gallery .image-container {
@@ -360,11 +370,25 @@ body {
 
     .main-image {
         position: static;
-        top: auto;
-        left: auto;
-        width: 100%;
-        transform: none;
-        margin-top: 20px;
+        top: 50% !important;
+        left: -15px !important;
+        width: 100% !important;
+        transform: none !important;
+    }
+    .main-image img{
+        border-radius: 59px !important;
+    }
+    .card[for="c1"]{
+        height: 250px !important;
+    }
+    .card[for="c2"]{
+        height: 250px !important;
+    }
+    .card[for="c3"]{
+        height: 250px !important;
+    }
+    .theme-slider-container input:checked + label{
+        height: 250px !important;
     }
 
     .button-box {
@@ -374,10 +398,35 @@ body {
         margin-bottom: 10px !important;
     }
 
+    .theme-slider-container input:checked + label {
+        background-color: inherit !important; /* Không thay đổi màu khi chọn */
+    }
+    .theme-slider-container input {
+        pointer-events: none !important;
+    }
+
     .theme-slider-container {
-        flex-direction: column;
-        height: auto;
         align-items: center;
+    }
+    .theme-slider-container input:checked + label {
+        /* Đặt lại mọi thuộc tính đã được sử dụng cho trạng thái checked */
+        background-color: initial !important; /* Đặt lại màu nền hoặc bất kỳ thuộc tính nào khác */
+        /* Add any other properties to reset styles */
+    }
+
+    .theme-slider-container input:checked {
+        display: none !important;
+    }
+    .themes-section{
+        height: 500px !important;
+    }
+    
+    .themes-section h1{
+        font-weight: 800px !important;
+        font-size: 25px !important;
+    }
+    .themes-section h2{
+        font-size: 16px !important;
     }
 
     .event-time {
