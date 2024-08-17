@@ -1,9 +1,4 @@
 .first-section, .themes-section, .event-schedule, .event-intro, .useful-links {
-    background: white;
-    margin: 20px 0;
-    padding: 20px;
-    border-radius: 8px;
-    height: 93vh;
 }
 .event-schedule{
     height: auto;
@@ -67,14 +62,14 @@
 }
 
 .links-icon {
+    width: 100%;
+    padding: 0 15px;
     margin-right: 0px; /* Tạo khoảng cách giữa các .links-icon theo chiều ngang */
-}
 
-
-.useful-links .links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    img {
+        width: 100%;
+        max-width: 100px;
+    }
 }
 
 .useful-links a {
@@ -89,7 +84,24 @@
     width: 18%;
 }
 
+.useful-links {
+    margin-bottom: 100px;
+
+    .swiper-slide {
+        width: calc(100%/7);
+    }
+}
+
 .useful-links a:hover {
     background-color: #0056b3;
+}
+
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1630px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 

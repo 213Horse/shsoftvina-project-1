@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Tourism Page</title>
+  <link rel="stylesheet" href="./include/library/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="./include/tour/css/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
     integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
@@ -18,8 +19,8 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
     integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="./include/tour/css/default.css">
   <link rel="stylesheet" href="./include/tour/css/layout.css">
+  <link rel="stylesheet" href="./include/tour/css/default.css">
 </head>
 
 <body>
@@ -54,8 +55,7 @@
     </div>
 
 
-    <div class="hero-content">
-
+    <div class="hero-content tabJS">
       <div class="header-top">
         <div class="weather">
           <p><img src="include/tour/img/main/Vector.png" alt="Temperature Icon" class="temp-icon"> </p>
@@ -67,37 +67,142 @@
           <h1>성남관광</h1>
           <h2>도심에서 느끼는 감성여행</h2>
           <p>아름다운 자연경관과 문화유산이 가득한 성남으로 오세요</p>
-          <div class="menu-links" style="position: relative;">
-            <a href="#" id="forest-link" data-images="include/tour/img/main/Rectangle5.png,include/tour/img/main/Rectangle4.png,include/tour/img/main/Rectangle6.png,include/tour/img/main/Rectangle7.png">성남의 산림</a>
-            <a href="#" id="water-link" data-images="include/tour/img/main/Rectangle4.png,include/tour/img/main/Rectangle5.png,include/tour/img/main/Rectangle7.png,include/tour/img/main/Rectangle6.png">성남의 물길</a>
-            <a href="#" id="culture-link" data-images="include/tour/img/main/Rectangle7.png,include/tour/img/main/Rectangle6.png,include/tour/img/main/Rectangle5.png,include/tour/img/main/Rectangle4.png">성남의 문화길</a>
-            <div class="pagination-line"></div> <!-- Đường phân trang -->
-        </div>
-        
-        </div>
 
-      </div>
-
-      <div class="image-gallery" style="position: relative;">
-        <div class="image-item">
-          <img src="include/tour/img/main/Rectangle5.png" alt="Ảnh 1">
-          <div class="plus-sign">+</div> <!-- Đảm bảo class này nằm bên trong image-item -->
-      </div>
-        <div class="image-item" style="position: relative;">
-          <img src="include/tour/img/main/Rectangle4.png" alt="Ảnh 2">
-          <div class="plus-sign">+</div>
-        </div>
-        <div class="image-item" style="position: relative;">
-          <img src="include/tour/img/main/Rectangle6.png" alt="Ảnh 3">
-          <div class="plus-sign">+</div>
-        </div>
-        <div class="image-item" style="position: relative;">
-          <img src="include/tour/img/main/Rectangle7.png" alt="Ảnh 4">
-          <div class="plus-sign">+</div>
         </div>
       </div>
+      <div class="menu-links" style="position: relative;">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div id="forest-link" class="tabBtn"
+                data-images="include/tour/img/main/Rectangle5.png,include/tour/img/main/Rectangle4.png,include/tour/img/main/Rectangle6.png,include/tour/img/main/Rectangle7.png">
+                성남의
+                산림</div>
+            </div>
+            <div class="swiper-slide">
+              <div class="tabBtn" id="water-link"
+                data-images="include/tour/img/main/Rectangle4.png,include/tour/img/main/Rectangle5.png,include/tour/img/main/Rectangle7.png,include/tour/img/main/Rectangle6.png">
+                성남의
+                물길</div>
+            </div>
+            <div class="swiper-slide">
+              <div class="tabBtn" id="culture-link"
+                data-images="include/tour/img/main/Rectangle7.png,include/tour/img/main/Rectangle6.png,include/tour/img/main/Rectangle5.png,include/tour/img/main/Rectangle4.png">
+                성남의
+                문화길</div>
+            </div>
+          </div>
+        </div>
 
+        <div class="pagination-line"></div> <!-- Đường phân trang -->
+      </div>
 
+      <div class="tabPanelList">
+        <div class="tabPanel">
+          <div class="picture-gallery">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="picture-item">
+                    <img src="include/tour/img/main/Rectangle5.png" alt="Ảnh 1">
+
+                    <span class="picture-txt">남한산성</span>
+                    <span class="picture-icon">
+                      <img src="./include/tour/img/main/icon-zoom.png" alt="">
+                    </span>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="picture-item">
+                    <img src="include/tour/img/main/Rectangle4.png" alt="Ảnh 2">
+                    <span class="picture-txt">남한산성</span>
+                    <span class="picture-icon">
+                      <img src="./include/tour/img/main/icon-zoom.png" alt="">
+                    </span>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="picture-item">
+                    <img src="include/tour/img/main/Rectangle6.png" alt="Ảnh 3">
+                    <span class="picture-txt">남한산성</span>
+                    <span class="picture-icon">
+                      <img src="./include/tour/img/main/icon-zoom.png" alt="">
+                    </span>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="picture-item">
+                    <img src="include/tour/img/main/Rectangle7.png" alt="Ảnh 4">
+                    <span class="picture-txt">남한산성</span>
+                    <span class="picture-icon">
+                      <img src="./include/tour/img/main/icon-zoom.png" alt="">
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+        <div class="tabPanel">
+          <div class="picture-gallery">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="picture-item">
+                    <img src="include/tour/img/main/Rectangle5.png" alt="Ảnh 1">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="picture-item">
+                    <img src="include/tour/img/main/Rectangle4.png" alt="Ảnh 2">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="picture-item">
+                    <img src="include/tour/img/main/Rectangle6.png" alt="Ảnh 3">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="picture-item">
+                    <img src="include/tour/img/main/Rectangle7.png" alt="Ảnh 4">
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+        <div class="tabPanel">
+          <div class="picture-gallery">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="picture-item">
+                    <img src="include/tour/img/main/Rectangle5.png" alt="Ảnh 1">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="picture-item">
+                    <img src="include/tour/img/main/Rectangle4.png" alt="Ảnh 2">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="picture-item">
+                    <img src="include/tour/img/main/Rectangle6.png" alt="Ảnh 3">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="picture-item">
+                    <img src="include/tour/img/main/Rectangle7.png" alt="Ảnh 4">
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -135,7 +240,7 @@
           </div>
         </div>
 
-        <div class="content">
+        <div class="content glr-swiper tabJS">
           <div class="content-1">
             <div class="seong-nam-background">
               <h1>Seong-Nam</h1>
@@ -148,117 +253,195 @@
               <div class="buttons-page">
                 <div class="button-box">
                   <div id="btn"></div>
-                  <button onclick="showTab(1)" type="button" class="toggle-btn active">성남 9경</button>
-                  <button onclick="showTab(2)" type="button" class="toggle-btn">벚꽃 9경</button>
+                  <button type="button" class="toggle-btn tabBtn">성남 9경</button>
+                  <button type="button" class="toggle-btn tabBtn">벚꽃 9경</button>
                 </div>
-                <div class="pagination">
-                  <button class="btn-page prev-image" onclick="prevImage()">◀</button>
 
-                  <button id="play-button" class="btn-page play" onclick="playImage()">▶</button>
-                  <button id="stop-button" class="btn-page stop" onclick="stopPlay()" style="display:none;">
-                    <img src="include\tour\img\layout\pause.png" alt="Stop Icon" style="width: 20px; height: 20px;">
-                  </button>
-
-                  <button class="btn-page next-image" onclick="nextImage()">▶</button>
-
+                <div class="buttons-media">
+                  <div class="content-prev">
+                    <img src="./include/tour/img/main/next-icon.png" alt="">
+                    <img src="./include/tour/img/main/prev-icon.png" alt="">
+                  </div>
+                  <div class="content-play">
+                    <img src="./include/tour/img/main/play-icon.png" alt="">
+                    <img src="./include/tour/img/main/pngwing.com.png" alt="">
+                  </div>
+                  <div class="content-next">
+                    <img src="./include/tour/img/main/next-icon.png" alt="">
+                    <img src="./include/tour/img/main/prev-icon.png" alt="">
+                  </div>
                 </div>
-                
               </div>
 
-              <div class="images" id="tab1">
-                <div class="image-container">
-                    <img src="include/tour/img/main/Rectangle9.jpg" alt="Image">
-                    <div class="image-overlay">
-                        <h3>1경 성남시청</h3>
-                        <div class="circle-image1">
-                            <img style="height: auto !important; width:74px !important" src="include/tour/img/layout/Ellipse22.png" alt="Circle Image1">
-                            <button class="arrow-icon">
-                                <i class="fas fa-arrow-right"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="image-container">
-                 
-                    <img src="include/tour/img/main/Rectangle12.jpg" alt="Ảnh cụ thể">
-                  
-                    <div class="image-overlay">
-                        <h3>2경 성남시장</h3>
-                        <div class="circle-image1">
-                          <img style="height: auto !important; width:74px !important" src="include/tour/img/layout/Ellipse22.png" alt="Circle Image1">
-                          <button class="arrow-icon">
-                              <i class="fas fa-arrow-right"></i>
-                          </button>
-                      </div>
-                    </div>
-                </div>
-                <div class="image-container">
-                    <img src="include/tour/img/main/Rectangle12.jpg" alt="Image 3">
-                    <div class="image-overlay">
-                        <h3>3경 성남성</h3>
-                        <div class="circle-image1">
-                          <img style="height: auto !important; width:74px !important" src="include/tour/img/layout/Ellipse22.png" alt="Circle Image1">
-                          <button class="arrow-icon">
-                              <i class="fas fa-arrow-right"></i>
-                          </button>
-                      </div>
-                    </div>
-                </div>
-            </div>
-            
+              <div class="tabPanelList">
+                <div class="tabPanel">
+                  <div class="content-swiper">
+                    <div class="swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="image-container">
+                            <img src="include/tour/img/main/Rectangle9.jpg" alt="Image">
+                            <div class="image-overlay">
+                              <h3>1경 성남시청</h3>
+                              <div class="circle-image1">
+                                <img style="height: auto !important; width:74px !important"
+                                  src="include/tour/img/layout/Ellipse22.png" alt="Circle Image1">
 
-              <div class="images" id="tab2" style="display:none;">
-                <div class="image-container">
-                  <img src="include/tour/img/main/Rectangle13.jpg" alt="Image 4">
-                  <div class="image-overlay">
-                    <h3>4경 벚꽃길</h3>
-                    <div class="circle-image1">
-                      <img style="height: auto !important; width:74px !important" src="include/tour/img/layout/Ellipse22.png" alt="Circle Image1">
-                      <button class="arrow-icon">
-                          <i class="fas fa-arrow-right"></i>
-                      </button>
-                  </div>
+                              </div>
+                            </div>
+                          </div>
+                          <button class="arrow-icon">
+                            <i class="fas fa-arrow-right"></i>
+                          </button>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="image-container">
+                            <img src="include/tour/img/main/Rectangle12.jpg" alt="Ảnh cụ thể">
+
+                            <div class="image-overlay">
+                              <h3>2경 성남시장</h3>
+                              <div class="circle-image1">
+                                <img style="height: auto !important; width:74px !important"
+                                  src="include/tour/img/layout/Ellipse22.png" alt="Circle Image1">
+
+                              </div>
+                            </div>
+                          </div>
+                          <button class="arrow-icon">
+                            <i class="fas fa-arrow-right"></i>
+                          </button>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="image-container">
+                            <img src="include/tour/img/main/Rectangle12.jpg" alt="Image 3">
+                            <div class="image-overlay">
+                              <h3>3경 성남성</h3>
+                              <div class="circle-image1">
+                                <img style="height: auto !important; width:74px !important"
+                                  src="include/tour/img/layout/Ellipse22.png" alt="Circle Image1">
+
+                              </div>
+                            </div>
+                          </div>
+                          <button class="arrow-icon">
+                            <i class="fas fa-arrow-right"></i>
+                          </button>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="image-container">
+                            <img src="include/tour/img/main/Rectangle9.jpg" alt="Image">
+                            <div class="image-overlay">
+                              <h3>1경 성남시청</h3>
+                              <div class="circle-image1">
+                                <img style="height: auto !important; width:74px !important"
+                                  src="include/tour/img/layout/Ellipse22.png" alt="Circle Image1">
+
+                              </div>
+                            </div>
+                          </div>
+                          <button class="arrow-icon">
+                            <i class="fas fa-arrow-right"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="image-container">
-                  <img src="include/tour/img/main/Rectangle14.jpg" alt="Image 5">
-                  <div class="image-overlay">
-                    <h3>5경 벚꽃놀이</h3>
-                    <div class="circle-image1">
-                      <img style="height: auto !important; width:74px !important" src="include/tour/img/layout/Ellipse22.png" alt="Circle Image1">
-                      <button class="arrow-icon">
-                          <i class="fas fa-arrow-right"></i>
-                      </button>
-                  </div>
+                <div class="tabPanel">
+                  <div class="content-swiper">
+                    <div class="swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="image-container">
+                            <img src="include/tour/img/main/Rectangle9.jpg" alt="Image">
+                            <div class="image-overlay">
+                              <h3>1경 성남시청</h3>
+                              <div class="circle-image1">
+                                <img style="height: auto !important; width:74px !important"
+                                  src="include/tour/img/layout/Ellipse22.png" alt="Circle Image1">
+
+                              </div>
+                            </div>
+                          </div>
+                          <button class="arrow-icon">
+                            <i class="fas fa-arrow-right"></i>
+                          </button>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="image-container">
+                            <img src="include/tour/img/main/Rectangle12.jpg" alt="Ảnh cụ thể">
+
+                            <div class="image-overlay">
+                              <h3>2경 성남시장</h3>
+                              <div class="circle-image1">
+                                <img style="height: auto !important; width:74px !important"
+                                  src="include/tour/img/layout/Ellipse22.png" alt="Circle Image1">
+
+                              </div>
+                            </div>
+                          </div>
+                          <button class="arrow-icon">
+                            <i class="fas fa-arrow-right"></i>
+                          </button>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="image-container">
+                            <img src="include/tour/img/main/Rectangle12.jpg" alt="Image 3">
+                            <div class="image-overlay">
+                              <h3>3경 성남성</h3>
+                              <div class="circle-image1">
+                                <img style="height: auto !important; width:74px !important"
+                                  src="include/tour/img/layout/Ellipse22.png" alt="Circle Image1">
+
+                              </div>
+                            </div>
+                          </div>
+                          <button class="arrow-icon">
+                            <i class="fas fa-arrow-right"></i>
+                          </button>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="image-container">
+                            <img src="include/tour/img/main/Rectangle9.jpg" alt="Image">
+                            <div class="image-overlay">
+                              <h3>1경 성남시청</h3>
+                              <div class="circle-image1">
+                                <img style="height: auto !important; width:74px !important"
+                                  src="include/tour/img/layout/Ellipse22.png" alt="Circle Image1">
+
+                              </div>
+                            </div>
+                          </div>
+                          <button class="arrow-icon">
+                            <i class="fas fa-arrow-right"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="image-container">
-                  <img src="include/tour/img/main/Rectangle15.jpg" alt="Image 6">
-                  <div class="image-overlay">
-                    <h3>6경 벚꽃축제</h3>
-                    <div class="circle-image1">
-                      <img style="height: auto !important; width:74px !important" src="include/tour/img/layout/Ellipse22.png" alt="Circle Image1">
-                      <button class="arrow-icon">
-                          <i class="fas fa-arrow-right"></i>
-                      </button>
-                  </div>
-                  </div>
-                </div>
+
               </div>
             </div>
 
 
 
           </div>
-          <div class="content-2">
-            <div class="main-image1">
-              <img src="include\tour\img\layout\Ellipse1.png" alt="Main Image 1">
+          <div class="content-2 tabPanelList">
+            <div class="tabPanel">
+              <div class="main-image">
+                <img id="main-display" src="include/tour/img/main/Rectangle9.jpg" alt="Main Image">
+                <!-- Thêm hình tròn vào đây -->
+                <button class="arrow-icon">
+                  <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
             </div>
-            <div class="main-image">
-              <img id="main-display" src="include/tour/img/main/Rectangle9.jpg" alt="Main Image">
-              <!-- Thêm hình tròn vào đây -->
-              <div class="circle-image">
-                <img src="include\tour\img\layout\Ellipse22.png" alt="Circle Image">
+
+            <div class="tabPanel">
+              <div class="main-image">
+                <img id="main-display" src="include/tour/img/main/Rectangle12.jpg" alt="Main Image">
+                <!-- Thêm hình tròn vào đây -->
                 <button class="arrow-icon">
                   <i class="fas fa-arrow-right"></i>
                 </button>
@@ -285,9 +468,6 @@
               <div class="description">
                 <p><strong>이야기가 있는 판교 워킹투어</strong></p>
                 <p style="font-size: 1rem !important;">간단한 투어 소개가 들어갑니다. </p>
-                <div class="slider-arrow">
-                  <i class="fas fa-arrow-circle-up" style="font-size:36px"></i>
-                </div>
               </div>
             </div>
           </label>
@@ -297,10 +477,7 @@
               <div class="icon">02</div>
               <div class="description">
                 <p><strong>이야기가 있는 판교 워킹투어</strong></p>
-                <p style="font-size: 1rem !important;">간단한 투어 소개가 들어갑니다.  </p>
-                <div class="slider-arrow">
-                  <i class="fas fa-arrow-circle-up" style="font-size:36px"></i>
-                </div>
+                <p style="font-size: 1rem !important;">간단한 투어 소개가 들어갑니다. </p>
               </div>
             </div>
           </label>
@@ -311,9 +488,6 @@
               <div class="description">
                 <p><strong>이야기가 있는 판교 워킹투어</strong></p>
                 <p style="font-size: 1rem !important;">간단한 투어 소개가 들어갑니다. </p>
-                <div class="slider-arrow">
-                  <i class="fas fa-arrow-circle-up" style="font-size:36px"></i>
-                </div>
               </div>
             </div>
           </label>
@@ -323,283 +497,326 @@
 
     <section class="event-overview">
       <!-- Section 1: Event Schedule -->
-      <div class="event-schedule">
-        <h2><strong>이달의 행사일정</strong></h2>
-        <div class="event-container">
-         
-          <button class="owl-prev"><</button>
-           <div class="owl-carousel">
-            <div class="item"><div class="slide">
-              <div class="date-time">
-                <h1><strong>4</h1></strong>
-                <h2><strong>2024.05</strong></h2>
+      <div class="container">
+        <div class="event-schedule">
+          <h2><strong>이달의 행사일정</strong></h2>
+          <div class="event-container">
+            <div class="event-swiper">
+              <div class="event-btn prev">
+                <img src="./include/tour/img/main/prev-event.png" alt="">
               </div>
-              <div class="event-detail">
-                <p class="event-paragraph"><strong>
-                  시립교향악단 성남뮤직페스티벌<br>
-                  시립교향악단 성남뮤직페스티벌
-                </strong></p>
-                <p class="event-time"><strong><i class="fa fa-clock-o"></i> 11:00 ~ 12:30</strong></p>
-              </div>
-              </div>
-          </div>
-    <div class="item"><div class="slide">
-      <div class="date-time">
-        <h1><strong>10</strong></h1>
-        <h2><strong>2024.05</strong></h2>
-      </div>
-      <div class="event-detail">
-        <p class="event-paragraph"><strong>
-          시립교향악단 성남뮤직페스티벌<br>
-          시립교향악단 성남뮤직페스티벌
-        </strong></p>
-        <p class="event-time"><strong><i class="fa fa-clock-o"></i> 18:30 ~ 19:30</strong></p>
-      </div>
-    </div></div>
-    <div class="item"> <div class="slide">
-      <div class="date-time">
-        <h1><strong>11</strong></h1>
-        <h2><strong>2024.05</strong></h2>
-      </div>
-      <div class="event-detail">
-        <p class="event-paragraph"><strong>
-          제 14회 전국 사진 촬영 대회
-        </strong></p>
-        <p class="event-time"><strong><i class="fa fa-clock-o"></i> 09:30 ~ 18:00</strong></p>
-      </div>
-    </div></div>
-    <div class="item"> <div class="slide">
-      <div class="date-time">
-        <h1><strong>4</strong></h1>
-        <h2><strong>2024.05</strong></h2>
-      </div>
-      <div class="event-detail">
-        <p class="event-paragraph"><strong>
-          시립교향악단 성남뮤직페스티벌<br>
-          시립교향악단 성남뮤직페스티벌
-        </strong></p>
-        <p class="event-time"><strong><i class="fa fa-clock-o"></i> 11:00 ~ 12:30</strong></p>
-      </div>
-    </div></div>
-    <div class="item"><div class="slide">
-      <div class="date-time">
-        <h1><strong>4</strong></h1>
-        <h2><strong>2024.05</strong></h2>
-      </div>
-      <div class="event-detail">
-        <p class="event-paragraph"><strong>
-          시립교향악단 성남뮤직페스티벌<br>
-          시립교향악단 성남뮤직페스티벌
-        </strong></p>
-        <p class="event-time"><strong><i class="fa fa-clock-o"></i> 11:00 ~ 12:30</strong></p>
-      </div>
-    </div></div>
-   
-            </div>
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="event-box">
+                      <div class="event-date">
+                        <span class="event-day">4</span>
+                        <span class="event-year">2024.05</span>
+                      </div>
 
-            <button class="owl-next">></button>
+                      <div class="event-content">
+                        <p class="event-txt">시립교향악단 성남뮤직페스티벌
+                          시립교향악단 성남뮤직페스티벌
+                        </p>
+
+                        <div class="event-time">
+                          <div class="event-time-icon">
+                            <img src="./include/tour/img/main/time-icon.png" alt="">
+                          </div>
+                          <div class="event-time-txt">
+                            11:00 ~ 12:30
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="event-box">
+                      <div class="event-date">
+                        <span class="event-day">4</span>
+                        <span class="event-year">2024.05</span>
+                      </div>
+
+                      <div class="event-content">
+                        <p class="event-txt">시립교향악단 성남뮤직페스티벌
+                          시립교향악단 성남뮤직페스티벌
+                        </p>
+
+                        <div class="event-time">
+                          <div class="event-time-icon">
+                            <img src="./include/tour/img/main/time-icon.png" alt="">
+                          </div>
+                          <div class="event-time-txt">
+                            11:00 ~ 12:30
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="event-box">
+                      <div class="event-date">
+                        <span class="event-day">4</span>
+                        <span class="event-year">2024.05</span>
+                      </div>
+
+                      <div class="event-content">
+                        <p class="event-txt">시립교향악단 성남뮤직페스티벌
+                          시립교향악단 성남뮤직페스티벌
+                        </p>
+
+                        <div class="event-time">
+                          <div class="event-time-icon">
+                            <img src="./include/tour/img/main/time-icon.png" alt="">
+                          </div>
+                          <div class="event-time-txt">
+                            11:00 ~ 12:30
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="event-box">
+                      <div class="event-date">
+                        <span class="event-day">4</span>
+                        <span class="event-year">2024.05</span>
+                      </div>
+
+                      <div class="event-content">
+                        <p class="event-txt">시립교향악단 성남뮤직페스티벌
+                          시립교향악단 성남뮤직페스티벌
+                        </p>
+
+                        <div class="event-time">
+                          <div class="event-time-icon">
+                            <img src="./include/tour/img/main/time-icon.png" alt="">
+                          </div>
+                          <div class="event-time-txt">
+                            11:00 ~ 12:30
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="event-btn next">
+                <img src="./include/tour/img/main/next-event.png" alt="">
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- Section 2: Event Introduction -->
       <div class="event-intro">
         <h2><strong>성남의 행사소개</strong></h2>
-    
+
         <div class="intro-content">
           <div class="image-collage1">
             <!-- Ảnh mới được thêm vào -->
-            <img
-            src="include\tour\img\layout\Rectangle_10.png"
-            alt="Background Image"
-            class="background-image" />
+            <img src="include\tour\img\layout\Rectangle_10.png" alt="Background Image" class="background-image" />
           </div>
-            <div class="image-collage">
-                <img
-                    src="https://s3-alpha-sig.figma.com/img/61c6/fb05/2d545dfe887aeefbc8563cf7aea7798b?Expires=1724630400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=JKcsdN5Ng9jaOjY6L7oxEj2VUnFzJ6MewThT67HkiMuzxuXqy~~zHBNMA8J0qQC54zcuhv-6Xm3ttQdVyNRDYX4vSYhoqjHuutrFn47J~s8~Zz~pvAI7vfMrSWMiA~Gmy3rklJodsqcDELELa45FdALtL6NkOwsfW5h7NVpYyvy9uVu-Ajx~WCWsN0iSC0eu0gTn9biVeThdoEzKUkRmTTM1-dqUfN0hTQ~2ux9SlT9kdxtPpKyPBMeVm~aU~eDlIRcBkc3nPOpxnsyFlbHHN1aKsuAt8sJwv8YUlEQCfDXPQ6iAPKIfnBfJ6toqqZ58h1ozdn4ivICOxAgBPbMptw__"
-                    alt="Event Image 1" />
+          <div class="image-collage">
+            <img
+              src="https://s3-alpha-sig.figma.com/img/61c6/fb05/2d545dfe887aeefbc8563cf7aea7798b?Expires=1724630400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=JKcsdN5Ng9jaOjY6L7oxEj2VUnFzJ6MewThT67HkiMuzxuXqy~~zHBNMA8J0qQC54zcuhv-6Xm3ttQdVyNRDYX4vSYhoqjHuutrFn47J~s8~Zz~pvAI7vfMrSWMiA~Gmy3rklJodsqcDELELa45FdALtL6NkOwsfW5h7NVpYyvy9uVu-Ajx~WCWsN0iSC0eu0gTn9biVeThdoEzKUkRmTTM1-dqUfN0hTQ~2ux9SlT9kdxtPpKyPBMeVm~aU~eDlIRcBkc3nPOpxnsyFlbHHN1aKsuAt8sJwv8YUlEQCfDXPQ6iAPKIfnBfJ6toqqZ58h1ozdn4ivICOxAgBPbMptw__"
+              alt="Event Image 1" />
+          </div>
+          <div class="intro-paragraph">
+            <h1><strong>[문화와 예술이 어우러지는] 미니콘서트</strong></h1>
+            <p>미니콘서트는 바쁜 일상생활로 쉽게 공연 문화를<br>접할 기회가 많지 않은 시민들을 위해 찾아가는<br>공연으로 음악 콘서트부터 사극, 악극, 오케스트라, 판소<br>리, 댄스, 드로잉
+              쇼까지 다채로운 공연을 즐길 수 있다.</p>
+            <div class="tags">
+              <div class="tag1">일정 연중 4 ~ 11월</div>
+              <div class="tag2">주관 한국예총 성남지회</div>
             </div>
-            <div class="intro-paragraph">
-                <h1><strong>[문화와 예술이 어우러지는] 미니콘서트</strong></h1>
-                <p>미니콘서트는 바쁜 일상생활로 쉽게 공연 문화를<br>접할 기회가 많지 않은 시민들을 위해 찾아가는<br>공연으로 음악 콘서트부터 사극, 악극, 오케스트라, 판소<br>리, 댄스, 드로잉
-                  쇼까지 다채로운 공연을 즐길 수 있다.</p>
-                <div class="tags">
-                    <div class="tag1">일정 연중 4 ~ 11월</div>
-                    <div class="tag2">주관 한국예총 성남지회</div>
-                </div>
-                <button class="event-button">바로가기</button>
-            </div>
-            <div class="pagination pagination-slider-bottom">
-              <button class="btn-page prev-image" onclick="prevImage1()">◀</button>
-
-              <button id="play-button" class="btn-page play" onclick="playImage1()">▶</button>
-              <button id="stop-button" class="btn-page stop" onclick="stopPlay1()" style="display:none;">
-                <img src="include\tour\img\layout\pause.png" alt="Stop Icon" style="width: 20px; height: 20px;">
-              </button>
-              
-              <button class="btn-page next-image" onclick="nextImage1()">▶</button>
-
-            </div>
+            <button class="event-button">바로가기</button>
+          </div>
         </div>
-    </div>
-    
+      </div>
 
-      <!-- Section 3: Useful Links -->
-      <div class="useful-links">
+
+    </section>
+
+    <!-- Useful Links -->
+    <section class="useful-links">
+      <div class="container">
         <h2><strong>성남 여행 길잡이</strong></h2>
-        <div class="links">
-          <div class="links-icon">
-            <img
-              src="https://s3-alpha-sig.figma.com/img/75ca/274b/03a8abf1ffe7a3822e8fe2eb2c8f0a14?Expires=1724630400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=nf5C-lZl4bUqJDHLJTcdh3uADhaZERLwpsIytYS7TiyTbIHVQfzHGoqHQdcgsacgskGzWvcmPBnwlR-mAFyW-ckua9wmDCsh9CVEKaoKt~8sI5dcBZH3ytTTXbwrTtIgmdp7HzC9S9aoOzuyuG-H0FU3AL6jsgmI~aMKJ4-lEPafU6gcRTc8iXiDzme7dRMSTq5p95HoV1NhS5WUwUz7xVcdORkOXXiHTEE0zVdj3iweAG07mC3MrzVlxtrU7iu671VB0ZfdSfbTedNNfzYP2-XGM-N7n5fKZeqZzQz8uCN0RWAxEjIcHiZnmEua2ZojoaVPvMiYn1i4vvvm9Ipk9g__"
-              alt="">
-            <p>성남관광컬러링</p>
+        <div class="useful-wrapper">
+          <div class="event-btn prev">
+            <img src="./include/tour/img/main/prev-event.png" alt="">
           </div>
-          <div class="links-icon">
-            <img
-              src="https://s3-alpha-sig.figma.com/img/8270/e8d7/6fd0dfcf9d97450c95a5c6f97e3777cc?Expires=1724630400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=IAA1vxj6H8-5tGZc7KHPtyR4p3IapXJb3Y~c4pL3L3qH8Rcal-C2gnuvetZLTQ-Vu9~xpFUe84xb3-Hol648f65TJVWq5~RMyUqveDrwhTOve6Y2F4T9vY~zo88d6GvE5ooTXPsm8s6Z5qOS39Z1P0UC76un8cZa-klKHhX2by9toZmhJNlkpvvoEMKW4RqMAJ6HyyHEae2YI6mX0pECRBl1tgc7D9iZ8WspIm4cVqkBa-11lVMqdsvfZfA-gAA4ZNB52tFaNRecFCXMrkThMRd4gdcFVVtSaqrgT7yV8pjgpwwwKCdgZBwM6q1xX41OxwL7-G4W~ALR0AGX2fQU0Q__"
-              alt="">
-            <p>성남관광사진</p>
+          <div class="swiper">
+            <div class="links swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="links-icon">
+                  <img
+                    src="https://s3-alpha-sig.figma.com/img/75ca/274b/03a8abf1ffe7a3822e8fe2eb2c8f0a14?Expires=1724630400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=nf5C-lZl4bUqJDHLJTcdh3uADhaZERLwpsIytYS7TiyTbIHVQfzHGoqHQdcgsacgskGzWvcmPBnwlR-mAFyW-ckua9wmDCsh9CVEKaoKt~8sI5dcBZH3ytTTXbwrTtIgmdp7HzC9S9aoOzuyuG-H0FU3AL6jsgmI~aMKJ4-lEPafU6gcRTc8iXiDzme7dRMSTq5p95HoV1NhS5WUwUz7xVcdORkOXXiHTEE0zVdj3iweAG07mC3MrzVlxtrU7iu671VB0ZfdSfbTedNNfzYP2-XGM-N7n5fKZeqZzQz8uCN0RWAxEjIcHiZnmEua2ZojoaVPvMiYn1i4vvvm9Ipk9g__"
+                    alt="">
+                  <p>성남관광컬러링</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="links-icon">
+                  <img
+                    src="https://s3-alpha-sig.figma.com/img/8270/e8d7/6fd0dfcf9d97450c95a5c6f97e3777cc?Expires=1724630400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=IAA1vxj6H8-5tGZc7KHPtyR4p3IapXJb3Y~c4pL3L3qH8Rcal-C2gnuvetZLTQ-Vu9~xpFUe84xb3-Hol648f65TJVWq5~RMyUqveDrwhTOve6Y2F4T9vY~zo88d6GvE5ooTXPsm8s6Z5qOS39Z1P0UC76un8cZa-klKHhX2by9toZmhJNlkpvvoEMKW4RqMAJ6HyyHEae2YI6mX0pECRBl1tgc7D9iZ8WspIm4cVqkBa-11lVMqdsvfZfA-gAA4ZNB52tFaNRecFCXMrkThMRd4gdcFVVtSaqrgT7yV8pjgpwwwKCdgZBwM6q1xX41OxwL7-G4W~ALR0AGX2fQU0Q__"
+                    alt="">
+                  <p>성남관광사진</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="links-icon">
+                  <img
+                    src="https://s3-alpha-sig.figma.com/img/1b9d/3fca/c60054ef77a5608cb05bce2408106a79?Expires=1724630400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=PYkqAG8fWpi6q1rxF3mmnPlEAydoF4dvIH7MDPOWPmD~-qrTVyjvdiKVe26yAu5WzU~XGBaG4x6DWFUxYFOeFP4iqH0JGpkMDh-PzjUBaB8dBO9bPEkn8lrbYjvQzSD8CZyWu4zD6ERqjjSUnyuBV-z-gu-u~4njIdZAz58NLzwzwEe3cyMhDThoPd-AYJQwFfM~yu275V0gjjIh8X3YHqWCw0AzvufTQquIfQ9VqcHi6LRR~Gj660ZqPSsyY1q3Ql0fq3asdW~aq70xOaeu7LTt5EtTk3Da9t6I0wu7Xjb6K3tXi2cYc0NeazpJehs~xrMSjeU2iBMRWadF~2BaHQ__"
+                    alt="">
+                  <p>관광안내지도</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="links-icon">
+                  <img
+                    src="https://s3-alpha-sig.figma.com/img/dc1f/ae03/c95c48356fcfaafff6ca1bea4fd2c1aa?Expires=1724630400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Z1s4Yd9Gh9bjywO6o3kuGhrvy1YTe4KJfbgXa1KGeizgNSLJZ9w5HryxZyONd1v7diMZc7NIzxzyTirLEPZtXvuGN0~XO2Me6TLHIK6cnRa94t4PQkhB4NFLUKAJfOqVgwn9MuZOsbibuwARO~Dg8BYaNKktgMqW9KCG5rU-OA-7AxJ-CPuP7M9GIF72NEiyH8~EG3kPJSR~1zDyZEPYD6H-dqvYU3q-1VapoQEVJ4fSsGhFV0M3iPPoLmTf5l5WXzoJaKzapId8Xzl9fq3I5jA2DvO3d~vJKhDSVNwHU0TE2OLgHAjHaSY14wmvHHnvDgbuE1KD~~R8ipDxbFnLvA__"
+                    alt="">
+                  <p>음식점</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="links-icon">
+                  <img
+                    src="https://s3-alpha-sig.figma.com/img/e429/cadd/dae6a7c112b81a2114bbd9ed3058e14e?Expires=1724630400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=C-yquBaI1k8hMDm6qWgM4jM32Emdi0UZv3H6zUaX5iZhrqjj02FBIP3yccEh58cZ~4sdvXILHyIzgA-RJHtH5k1Cy-3sWB6FigHdvecZEBk5vQUKv6ngzNYWtrZr-3mQM1b70WhBrLooemjLGVoJY-0ZCD3bvHmaa8uPqPwXcLTUperDJ47VfTf-hivgY3OIj-QppjQ6jCTSp8y5-KbD38ywM6LLCc48u1RoBG2YV0~rqKEvZB5svCxEL9xYhm~j95yX2cINCAlPgg49b6CY8hbpCA0wqanXjfDxDmw0mdLdE6xIyjvZIv7p~GTnESB-DiedHpHWzO-SqvSxZkZGgw__"
+                    alt="">
+                  <p>숙박</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="links-icon">
+                  <img
+                    src="https://s3-alpha-sig.figma.com/img/b34f/8551/0d0adb784916a094d7c6814a4284779f?Expires=1724630400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=g6gVWqIJ~9i7cw9~3cr5NOUeIY1lOdtCZ1FxoF9cigBRneJRPCiES0oleboptHXOYzpCZL7Jt1zYDp2iW3CVkgvKB2d0OjOD5~SOtJt7x~yQlCFk7DJTWqME3i1xlsFlGNarTGCaLDJ9F4XAzl2cE65F4KnHdSn7k3iuE7eb74caIm5Mdz9ZuOTGTFlOlS1KQySzSMG7Jml9NqjA~9EpCC-Ec1j0CntL4YViIDO~fdDAtYD01H69zaOuVp8y65mWpc50-jrFDbLcVJlewzgWjDAKi4B4fxRLP-AyRngpgLsTSl0BzoCKFtBPlfYIeweo6uSWblkPTI9lguafqvg5pw__"
+                    alt="">
+                  <p>맛집거리</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="links-icon">
+                  <img
+                    src="https://s3-alpha-sig.figma.com/img/221f/2657/0e3ad47c1ae7a14f2c080baff5dc2faa?Expires=1724630400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=KA5uPaNlWFhYWKUzeNj0thlKa9gnZRACx39yK7D2gfM9MerI7-3bQmgjkqDr~RJig3XdREOLHKovTbAed5kRfiAn2xd7DwqmC6RWg0ERqJXQ~Mb4Tu5~ZzDDsBXPGhr5-~Glf4jmKGnuuET4h8A6HNapknOO8f8nZlJHIlHMsdRou5bjVJOF~C~cXYFKZElSzzQEGv3~WeBWetC0v-VLVom58UE25Y0BbuQGoNG8tqWpRChlBPuML8aQ1Ec8cR7Mmkpx8LwNthlqaO~D89E6899Qvt16k~mzL0gaCN0kgK3hIXYA2ngSuyxwH28VMI0hPckqhe4AJ~PdXHKd91cUFg__"
+                    alt="">
+                  <p>경기도특화거리</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="links-icon">
-            <img
-              src="https://s3-alpha-sig.figma.com/img/1b9d/3fca/c60054ef77a5608cb05bce2408106a79?Expires=1724630400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=PYkqAG8fWpi6q1rxF3mmnPlEAydoF4dvIH7MDPOWPmD~-qrTVyjvdiKVe26yAu5WzU~XGBaG4x6DWFUxYFOeFP4iqH0JGpkMDh-PzjUBaB8dBO9bPEkn8lrbYjvQzSD8CZyWu4zD6ERqjjSUnyuBV-z-gu-u~4njIdZAz58NLzwzwEe3cyMhDThoPd-AYJQwFfM~yu275V0gjjIh8X3YHqWCw0AzvufTQquIfQ9VqcHi6LRR~Gj660ZqPSsyY1q3Ql0fq3asdW~aq70xOaeu7LTt5EtTk3Da9t6I0wu7Xjb6K3tXi2cYc0NeazpJehs~xrMSjeU2iBMRWadF~2BaHQ__"
-              alt="">
-            <p>관광안내지도</p>
-          </div>
-          <div class="links-icon">
-            <img
-              src="https://s3-alpha-sig.figma.com/img/dc1f/ae03/c95c48356fcfaafff6ca1bea4fd2c1aa?Expires=1724630400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Z1s4Yd9Gh9bjywO6o3kuGhrvy1YTe4KJfbgXa1KGeizgNSLJZ9w5HryxZyONd1v7diMZc7NIzxzyTirLEPZtXvuGN0~XO2Me6TLHIK6cnRa94t4PQkhB4NFLUKAJfOqVgwn9MuZOsbibuwARO~Dg8BYaNKktgMqW9KCG5rU-OA-7AxJ-CPuP7M9GIF72NEiyH8~EG3kPJSR~1zDyZEPYD6H-dqvYU3q-1VapoQEVJ4fSsGhFV0M3iPPoLmTf5l5WXzoJaKzapId8Xzl9fq3I5jA2DvO3d~vJKhDSVNwHU0TE2OLgHAjHaSY14wmvHHnvDgbuE1KD~~R8ipDxbFnLvA__"
-              alt="">
-            <p>음식점</p>
-          </div>
-          <div class="links-icon">
-            <img
-              src="https://s3-alpha-sig.figma.com/img/e429/cadd/dae6a7c112b81a2114bbd9ed3058e14e?Expires=1724630400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=C-yquBaI1k8hMDm6qWgM4jM32Emdi0UZv3H6zUaX5iZhrqjj02FBIP3yccEh58cZ~4sdvXILHyIzgA-RJHtH5k1Cy-3sWB6FigHdvecZEBk5vQUKv6ngzNYWtrZr-3mQM1b70WhBrLooemjLGVoJY-0ZCD3bvHmaa8uPqPwXcLTUperDJ47VfTf-hivgY3OIj-QppjQ6jCTSp8y5-KbD38ywM6LLCc48u1RoBG2YV0~rqKEvZB5svCxEL9xYhm~j95yX2cINCAlPgg49b6CY8hbpCA0wqanXjfDxDmw0mdLdE6xIyjvZIv7p~GTnESB-DiedHpHWzO-SqvSxZkZGgw__"
-              alt="">
-            <p>숙박</p>
-          </div>
-          <div class="links-icon">
-            <img
-              src="https://s3-alpha-sig.figma.com/img/b34f/8551/0d0adb784916a094d7c6814a4284779f?Expires=1724630400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=g6gVWqIJ~9i7cw9~3cr5NOUeIY1lOdtCZ1FxoF9cigBRneJRPCiES0oleboptHXOYzpCZL7Jt1zYDp2iW3CVkgvKB2d0OjOD5~SOtJt7x~yQlCFk7DJTWqME3i1xlsFlGNarTGCaLDJ9F4XAzl2cE65F4KnHdSn7k3iuE7eb74caIm5Mdz9ZuOTGTFlOlS1KQySzSMG7Jml9NqjA~9EpCC-Ec1j0CntL4YViIDO~fdDAtYD01H69zaOuVp8y65mWpc50-jrFDbLcVJlewzgWjDAKi4B4fxRLP-AyRngpgLsTSl0BzoCKFtBPlfYIeweo6uSWblkPTI9lguafqvg5pw__"
-              alt="">
-            <p>맛집거리</p>
-          </div>
-          <div class="links-icon">
-            <img
-              src="https://s3-alpha-sig.figma.com/img/221f/2657/0e3ad47c1ae7a14f2c080baff5dc2faa?Expires=1724630400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=KA5uPaNlWFhYWKUzeNj0thlKa9gnZRACx39yK7D2gfM9MerI7-3bQmgjkqDr~RJig3XdREOLHKovTbAed5kRfiAn2xd7DwqmC6RWg0ERqJXQ~Mb4Tu5~ZzDDsBXPGhr5-~Glf4jmKGnuuET4h8A6HNapknOO8f8nZlJHIlHMsdRou5bjVJOF~C~cXYFKZElSzzQEGv3~WeBWetC0v-VLVom58UE25Y0BbuQGoNG8tqWpRChlBPuML8aQ1Ec8cR7Mmkpx8LwNthlqaO~D89E6899Qvt16k~mzL0gaCN0kgK3hIXYA2ngSuyxwH28VMI0hPckqhe4AJ~PdXHKd91cUFg__"
-              alt="">
-            <p>경기도특화거리</p>
+          <div class="event-btn next">
+            <img src="./include/tour/img/main/next-event.png" alt="">
           </div>
         </div>
       </div>
     </section>
-
   </main>
 
   <!-- Footer -->
   <footer>
+    <div class="container">
+      <div class="footer-wrap">
+        <div class="footer-left">
+          <div class="footer-logo">
+            <div class="footer-logo-img">
+              <img
+                src="https://s3-alpha-sig.figma.com/img/c26d/967b/5b7ad8290b62aa9cecbe4dcbae19797b?Expires=1724630400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=W0-wNhLfFXBffFdNkm8Gnzsew3Ko653Q4EdgUyCOTZwQqFt9u-XsQgV4NbTwARLbili0rQusceZvav4q0UKSFAJy8LnO5WC4DbfrQgy3WfWpWskWFmnsU0~m4rEsSrjnsp2daXg~gFopnOTOp79NS1MTTnkA2uAdbV0Vzdb5XWUKwoeqgCkw2yQofTVduU43I-emSHEFbCoQTs-AUY~4oxYbezxfzWYv0Stx3rYQmHNri1ekUPJK3amQjxXDGdQeU13PZoH6Wbx-d11FyrMdCEd4Xgw9JvWL0CQK1qC7~lwO3GBkdmwxQfpo-8bwBSalm6MMviWDUtCSOdLRsGBLtA__"
+                alt="">
+            </div>
+            <div class="footer-nav">
+              <a href="" class="footer-link">개인정보처리방침</a>
+              <p class="footer-border">조직도</p>
+              <p>사이트맵</p>
+            </div>
+          </div>
+          <div class="footer-paragraph">우) 13437 경기도 성남시 중원구 성남대로 997 (여수동) 문화관광과 | 전화 : 1577-3100 | 팩스 : 031-729-2979
+          </div>
+          <div class="copy-right">
+            Copyright ⓒ Seongnam City. All Rights Reserved.
 
-    <div class="footer-left">
-      <div class="footer-logo">
-        <div>
+            <div class="footer-img">
+              <img
+                src="https://s3-alpha-sig.figma.com/img/641c/ed26/5a694d94ec3e803c86922fcb89f50cd9?Expires=1724630400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lbMEtVSZBFOzkQuvx2V~6F6Td44tjDa9BIiEO0AExrWClHh0ibLKFlGOEaQCSUh0D-OZAcHWILuQbwG6wSWZ065MCOhdJ23r01Srw~u~IVkAExw8mZYhwVufuzD04xr1SSHlXJD~voraZsnNmvw1236lz8ikuSjK4EECr-5KwSquIYgOVMoMNqxmBjachMIkq59V7eLmzuWTWN0ZjbQTNeSeDZx44uaIcknErkTaS3j4myVGC0XgT1hg-lQE~E4srXC42HezWV1mll8FuwLhKGp~7JBpx5SwDBJw6ry6bkKMBoUVKw84ov1spqSBeuHxNaow3jMsVgoMGXcQwOnboQ__"
+                alt="">
+            </div>
+          </div>
+        </div>
+        <div class="footer-right">
           <img
-            src="https://s3-alpha-sig.figma.com/img/c26d/967b/5b7ad8290b62aa9cecbe4dcbae19797b?Expires=1724630400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=W0-wNhLfFXBffFdNkm8Gnzsew3Ko653Q4EdgUyCOTZwQqFt9u-XsQgV4NbTwARLbili0rQusceZvav4q0UKSFAJy8LnO5WC4DbfrQgy3WfWpWskWFmnsU0~m4rEsSrjnsp2daXg~gFopnOTOp79NS1MTTnkA2uAdbV0Vzdb5XWUKwoeqgCkw2yQofTVduU43I-emSHEFbCoQTs-AUY~4oxYbezxfzWYv0Stx3rYQmHNri1ekUPJK3amQjxXDGdQeU13PZoH6Wbx-d11FyrMdCEd4Xgw9JvWL0CQK1qC7~lwO3GBkdmwxQfpo-8bwBSalm6MMviWDUtCSOdLRsGBLtA__"
+            src="https://s3-alpha-sig.figma.com/img/641c/ed26/5a694d94ec3e803c86922fcb89f50cd9?Expires=1724630400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lbMEtVSZBFOzkQuvx2V~6F6Td44tjDa9BIiEO0AExrWClHh0ibLKFlGOEaQCSUh0D-OZAcHWILuQbwG6wSWZ065MCOhdJ23r01Srw~u~IVkAExw8mZYhwVufuzD04xr1SSHlXJD~voraZsnNmvw1236lz8ikuSjK4EECr-5KwSquIYgOVMoMNqxmBjachMIkq59V7eLmzuWTWN0ZjbQTNeSeDZx44uaIcknErkTaS3j4myVGC0XgT1hg-lQE~E4srXC42HezWV1mll8FuwLhKGp~7JBpx5SwDBJw6ry6bkKMBoUVKw84ov1spqSBeuHxNaow3jMsVgoMGXcQwOnboQ__"
             alt="">
         </div>
-        <link class="footer-section">
-        <a href="" class="footer-link"><strong>개인정보처리방침</strong></a>
-        <a class="footer-border"><strong>조직도</strong></a>
-        <a><strong>사이트맵</strong></a>
-        </link>
+
       </div>
-      <br>
-      <br>
-      <div class="footer-paragraph">우) 13437 경기도 성남시 중원구 성남대로 997 (여수동) 문화관광과 | 전화 : 1577-3100 | 팩스 : 031-729-2979</div>
-      
-      Copyright ⓒ Seongnam City. All Rights Reserved.
-    </div>
-    <div class="footer-right">
-      <img
-        src="https://s3-alpha-sig.figma.com/img/641c/ed26/5a694d94ec3e803c86922fcb89f50cd9?Expires=1724630400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lbMEtVSZBFOzkQuvx2V~6F6Td44tjDa9BIiEO0AExrWClHh0ibLKFlGOEaQCSUh0D-OZAcHWILuQbwG6wSWZ065MCOhdJ23r01Srw~u~IVkAExw8mZYhwVufuzD04xr1SSHlXJD~voraZsnNmvw1236lz8ikuSjK4EECr-5KwSquIYgOVMoMNqxmBjachMIkq59V7eLmzuWTWN0ZjbQTNeSeDZx44uaIcknErkTaS3j4myVGC0XgT1hg-lQE~E4srXC42HezWV1mll8FuwLhKGp~7JBpx5SwDBJw6ry6bkKMBoUVKw84ov1spqSBeuHxNaow3jMsVgoMGXcQwOnboQ__"
-        alt="">
     </div>
 
   </footer>
   <!-- Script -->
-  <script
-  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-  integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-></script>
-<!-- Import script owl carousel  -->
-<script
-  src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-  integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-></script>
-<script type="text/javascript" >
-  $(document).ready(function(){
-    var owl = $('.owl-carousel').owlCarousel({
-        margin:0,
-        nav:false,
-        mouseDrag:false,
-        touchDrag:false,
-        pullDrag:false,
-        loop:false, // Tắt chế độ vòng lặp
-        responsive:{
-            0:{
-                items:3 // Hiển thị 3 item trên mỗi trang
-            },
-            600:{
-                items:3
-            },
-            1000:{
-                items:3
-            },
-            1400:{
-              items:3
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- Import script owl carousel  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./include/library/swiper/swiper-bundle.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      var owl = $('.owl-carousel').owlCarousel({
+        margin: 0,
+        nav: false,
+        mouseDrag: false,
+        touchDrag: false,
+        pullDrag: false,
+        loop: false, // Tắt chế độ vòng lặp
+        responsive: {
+          0: {
+            items: 3 // Hiển thị 3 item trên mỗi trang
+          },
+          600: {
+            items: 3
+          },
+          1000: {
+            items: 3
+          },
+          1400: {
+            items: 3
           },
         }
-    });
+      });
 
-    var direction = 'right'; // Hướng ban đầu là 'right' (phải qua trái)
-
-    function autoSlide() {
+      function autoSlide() {
         var totalItems = $('.owl-item').length; // Tổng số item
         var itemsPerPage = 3; // Số item mỗi trang
         var currentIndex = owl.find('.active').index(); // Vị trí hiện tại của trang
         var totalPages = Math.ceil(totalItems / itemsPerPage); // Tổng số trang
         var currentPage = Math.floor(currentIndex / itemsPerPage) + 1; // Trang hiện tại
 
-        if (direction === 'right') {
-            if (currentPage < totalPages) {
-                owl.trigger('next.owl.carousel'); // Chuyển tới trang tiếp theo
-            } else {
-                direction = 'left'; // Đổi hướng sang 'left' khi đến trang cuối
-            }
+        if (currentPage < totalPages) {
+          owl.trigger('next.owl.carousel'); // Chuyển tới trang tiếp theo
         } else {
-            if (currentPage > 1) {
-                owl.trigger('prev.owl.carousel'); // Chuyển ngược lại trang trước đó
-            } else {
-                direction = 'right'; // Đổi hướng sang 'right' khi đến trang đầu tiên
-            }
+          owl.trigger('to.owl.carousel', [0, 300]); // Quay lại trang đầu tiên
         }
-    }
+      }
 
-    setInterval(autoSlide, 3000); // Chuyển trang mỗi 2 giây
+      setInterval(autoSlide, 2000); // Chuyển trang mỗi 2 giây
 
-    $('.owl-next').click(function() {
+      $('.owl-next').click(function () {
         owl.trigger('next.owl.carousel');
-    });
+      });
 
-    $('.owl-prev').click(function() {
+      $('.owl-prev').click(function () {
         owl.trigger('prev.owl.carousel');
+      });
     });
-});
-</script>
 
 
+  </script>
+  <script src="./include/tour/js/swiper.js"></script>
+  <script src="./include/tour/js/tab.js"></script>
   <script type="text/javascript" src="include/tour/js/main.js"></script>
   <script src="include/tour/js/layout.js"></script>
 </body>
